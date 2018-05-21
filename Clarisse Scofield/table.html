@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="filmes.css">
+        <title>Clarisse Scofield</title>
+        
+        <style type="text/css">#title,#glyphs h1{font-family:"Open Sans Condensed Light"}</style>
+    </head>
+    <body>
+
+        <div id="header">
+            <h1>Jogo da velha</h1>
+         </div>
+        
+
+       <div class="row">
+            <div class="table-responsive">          
+                 <div class="col-md-4 col-md-offset-3">
+                  <table class="table table-bordered">
+                    <tbody>
+                        <br><br><br>
+                        <form>
+                            Nome do jogador 1: <input type="text" name="j1name" id="j1nome"><br><br>
+                            Nome do jogador 2: <input type="text" name="j2name" id="j2nome"><br>
+                        </form>
+                        <label id="player">Clique</label>
+                    <tr>
+                        <tr>
+                            <td><div id="1">1</div></td> <!-- id é a casa -->
+                            <td><div id="2">2</div></td>
+                            <td><div id="3">3</div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="4">4</div></td>
+                            <td><div id="5">5</div></td>
+                            <td><div id="6">6</div></td>
+                        </tr>
+                         <tr>
+                            <td><div id="7">7</div></td>
+                            <td><div id="8">8</div></td>
+                            <td><div id="9">9</div></td>
+                        </tr>
+                    </tr>
+                    </tbody>
+                  </table>
+                    
+               </div>
+            </div>
+        </div>
+        <h3 id="vencedor"> </h3>
+
+        <p id="j1"> Jogador 1: 0</p>
+        <p id="j2"> Jogador 2: 0</p>
+        <button type="button" onclick="comecar();">Jogar!</button>
+
+          
+
+        
+            
+       
+    </body>
+    <script src="main.js"></script>
+    <script src="mainjquery.js"></script>
+</html>
