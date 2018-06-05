@@ -1,0 +1,17 @@
+#nav{
+    margin-top: 2%;
+}
+#title{
+    font-style: italic;
+    font-size: 2em;
+    font-family: 'Inconsolata', monospace;
+    color: rgb(69, 40, 14);
+    border:  color: rgb(69, 40, 14);
+    margin-top: 2%;
+}
+#card1, #card2 {
+}
+.cardTitle{
+    background-color: rgb(246, 250, 230) !important;
+    color: rgb(69, 40, 14);
+}
