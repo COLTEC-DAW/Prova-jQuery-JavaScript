@@ -1,0 +1,14 @@
+{
+    "1":{
+        "nome": "Secretária",
+        "audio": "assets/audio/secretaria.mp3",
+        "imagem": "assets/imagem/secretaria.jpeg",
+        "texto": "Secretária, as vezes penso em falar contigo mas tenho medo de ser confundido por um assédio sexual."
+    },
+    "2":{
+        "nome": "Evidências",
+        "audio": "assets/audio/evidencias.mp3",
+        "imagem": "assets/imagem/evidencias.jpeg",
+        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+    }
+}
