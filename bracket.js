@@ -1,85 +1,53 @@
-var arrayAux = [];
-var arrayE = [];
-var i = 0;
+var bracket = []
 
-$(document).ready(function(){
-    round();
-});
+// $(document).ready(function(){
+//     console.log("OPEN");
+//     let url = new URL(window.location.href);
+//     bracket = url.searchParams.get("bracket").split('a');
+//     console.log(bracket);
+// });
 
-function round (){
-    console.log("Posição");
-    console.log(i);
-    run(i);
+window.onload = function(){
+    let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href)
+    console.log(link);
+    let url = new URL(window.location.href);
+    let aux = url.searchParams.get("bracket").split('a');
+    array.map((element) => {
+        bracket.push(element);
+    })
+    aux.map((id) => {
+        bracket.push(get(id));
+    })
+    render();
+};
+
+function get(i){
+    return array[i];
 }
-function run (i){
 
-    imageSetup(array[i], array[i+1]);
-    soundSetup(array[i], array[i+1]);
-}
-
-function buttonClicked(btn){
-
-    arrayAux.push(array[i+btn].id);
-    arrayE.push(array[i+btn]);
-    if (array.length == 2) {
-        let address = window.location.href.split('').splice(0, window.location.href.length-10).join('')+'bracket.html?bracket='+arrayAux.join('a')
-        window.location.href = address;
-
-    }
-    else{
-        if(i < array.length - 2)
-            i = i+2;
-        else{
-            i = 0;
-            array = arrayE;
-            arrayE = [];
+function render (){
+    for(let i = 1; i < 6; i++){
+        let elementId = 'col'+i;
+        let element = document.getElementById(elementId);
+        for (let j= 0; j < Math.pow(2, 5-i); j++) {
+            console.log(j);
+            let card = document.createElement('DIV');
+            card.innerHTML = "<p>"+ bracket[j].nome +"</p>"
+            element.appendChild(card);
         }
-        round()
+        bracket.splice(0, Math.pow(2, 5-i));
     }
 }
-function imageSetup(obj1, obj2){
-    $('#img1').attr('src', obj1.imagem);
-    $('#img2').attr('src', obj2.imagem);
 
-    $('#cardTitle1').html(obj1.nome);
-    $('#cardTitle2').html(obj2.nome);
-
-    $('#text1').html(obj1.texto);
-    $('#text2').html(obj2.texto);
-
+function shareTwitter(){
+    let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href)
+    window.open("https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href))
 }
 
-
-function soundSetup (obj1, obj2){
-    soundManager.setup({
-      // where to find flash audio SWFs, as needed
-      url: '/path/to/swf-files/',
-      onready: function() {
-
-          var m1 = soundManager.createSound({
-            url: obj1.audio
-          });
-          var m2 = soundManager.createSound({
-            url: obj2.audio
-          });
-
-          $( "#img1" )
-              .mouseover(function() {
-                  m1.play();
-              })
-              .mouseout(function (){
-                  m1.stop();
-              });
-
-          $( "#img2" )
-              .mouseover(function() {
-                  m2.play();
-              })
-              .mouseout(function (){
-                  m2.stop();
-              });
-      }
-    });
+function shareTumblr(){
+            window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='
+            +document.getElementById('author').innerHTML +'&content='
+            + document.getElementById('quoteText').innerHTML +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
 }
 
 var array = [
