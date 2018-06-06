@@ -14,60 +14,60 @@ function BinaryTree(){
 }
 
 function startBracket(tree) {    
-    tree.setNode("fifa12.jpg", 4, 0);
-    setBackgroundImage("fifa12", 4, 0);
-    tree.setNode("fifa15.jpg", 4, 1);
-    setBackgroundImage("fifa15", 4, 0);
+    // tree.setNode("fifa12.jpg", 4, 0);
+    // setImage("fifa12.jpg", 4, 0);
+    // tree.setNode("fifa15.jpg", 4, 1);
+    // setImage("fifa15.jpg", 4, 1);
     
-    tree.setNode("fifa18.jpg", 4, 2);
-    setBackgroundImage("fifa18", 4, 0);
-    tree.setNode("fifaMobile.jpg", 4, 3);
-    setBackgroundImage("fifaMobile", 4, 0);
+    // tree.setNode("fifa18.jpg", 4, 2);
+    // setImage("fifa18", 4, 2);
+    // tree.setNode("fifaMobile.jpg", 4, 3);
+    // setImage("fifaMobile", 4, 3);
     
-    tree.setNode("fifaStreet1.jpg", 4, 4);
-    setBackgroundImage("fifaStreet1.", 4, 0);
-    tree.setNode("fifaStreet2.jpg", 4, 5);
-    setBackgroundImage("fifaStreet2", 4, 0);
+    // tree.setNode("fifaStreet1.jpg", 4, 4);
+    // setImage("fifaStreet1.", 4, 4);
+    // tree.setNode("fifaStreet2.jpg", 4, 5);
+    // setImage("fifaStreet2", 4, 5);
     
-    tree.setNode("fifaStreet3.jpg", 4, 6);
-    setBackgroundImage("fifaStreet3", 4, 0);
-    tree.setNode("fifaWorldCup14.jpg", 4, 7);
-    setBackgroundImage("fifaWorldCup14", 4, 0);
+    // tree.setNode("fifaStreet3.jpg", 4, 6);
+    // setImage("fifaStreet3", 4, 6);
+    // tree.setNode("fifaWorldCup14.jpg", 4, 7);
+    // setImage("fifaWorldCup14", 4, 7);
 
-    // Mid-Bracket
+    // // Mid-Bracket
     
-    tree.setNode("internationalSuperStarSoccer.jpg", 4, 8);
-    setBackgroundImage("internationalSuperStarSoccer", 4, 0);
-    tree.setNode("pes10.jpg", 4, 9);
-    setBackgroundImage("pes10.", 4, 0);
+    // tree.setNode("internationalSuperStarSoccer.jpg", 4, 8);
+    // setImage("internationalSuperStarSoccer", 4, 8);
+    // tree.setNode("pes10.jpg", 4, 9);
+    // setImage("pes10.", 4, 9);
     
-    tree.setNode("pes13.jpg", 4, 10);
-    setBackgroundImage("pes13", 4, 0);
-    tree.setNode("pes18.jpg", 4, 11);
-    setBackgroundImage("pes18", 4, 0);
+    // tree.setNode("pes13.jpg", 4, 10);
+    // setImage("pes13", 4, 10);
+    // tree.setNode("pes18.jpg", 4, 11);
+    // setImage("pes18", 4, 11);
     
-    tree.setNode("pesMobile.jpg", 4, 12);
-    setBackgroundImage("pesMobile", 4, 0);
-    tree.setNode("Ronaldinho-Soccer-97.jpg", 4, 13);
-    setBackgroundImage("Ronaldinho-Soccer-97", 4, 0);
+    // tree.setNode("pesMobile.jpg", 4, 12);
+    // setImage("pesMobile", 4, 12);
+    // tree.setNode("Ronaldinho-Soccer-97.jpg", 4, 13);
+    // setImage("Ronaldinho-Soccer-97", 4, 13);
     
     tree.setNode("winningEleven10.jpg", 4, 14);
-    setBackgroundImage("winningEleven10", 4, 0);
+    setImage("winningEleven10.jpg", 4, 14);
     tree.setNode("fifa12.jpg", 4, 15); // trocar imagem
-    setBackgroundImage("fifa12", 4, 0);
+    setImage("fifa12.jpg", 4, 15);
 }
 
-function makeWinnerChange(singleBracket, tree) {
-    var divID = document.getElementById(singleBracket.id);
-    style = window.getComputedStyle(divID, false);
-    img = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-    
-    img = img.split("/");
-    img = img[img.length-1];
-
+function makeWinnerChange(card, tree) {
+    var divID = $(card).children().children();
+    divID = divID[0].id;
+    console.log(divID);
     var levelAndNode = divID.split("-");
     var level = parseInt(levelAndNode[0].split(":")[1]);
     var node = parseInt(levelAndNode[1].split(":")[1]);
+
+    var img = document.getElementById(divID).src;
+    img = img.split("/");
+    img = img[img.length-1];
 
     if(level === 0) {
         // TODO: the request to share
@@ -82,23 +82,20 @@ function makeWinnerChange(singleBracket, tree) {
     }
 
     tree.setNode(img, level-1, node);
-    setBackgroundImage(level-1, node);
+    setImage(img, level-1, node);
 }
 
-function setBackgroundImage(img, level, node) {
-    $("#level:" + level.toString() + "-node:" + node.toString()).css({
-        "background-image" : "url(./assets/images/" + img + ".jpg)", 
-        "background-size" : "cover", 
-        "background-repeat" : "no-repeat",
-        "background-position": "center"
-    });
+function setImage(img, level, node) {
+    console.log("#level:" + level.toString() + "-node:" + node.toString());
+    document.getElementById("level:" + level.toString() + "-node:" + node.toString())
+        .src = "./assets/images/" + img;
 }
 
 $(document).ready(function () {
     var tree = new BinaryTree();
     startBracket(tree);
 
-    $(".single-bracket").click(function() { 
+    $(".card").click(function() { 
         makeWinnerChange(this, tree);
     });
 });

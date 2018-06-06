@@ -9,6 +9,7 @@
   "author": "Bryan Santos & Germano Barcelos",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-rc.1"
   },
   "devDependencies": {
