@@ -1,3 +1,30 @@
 body {
     background-image: url("city.jpg");
 }
+
+.row{
+    flex-wrap: unset !important;
+}
+
+.card li{
+    width: 6rem;
+    height: 2.5rem;
+}
+
+.list-group-item{
+    padding: .1rem 0.7rem !important;
+}
+
+.card{
+    cursor: pointer;
+}
+
+.col_16avos{}
+
+.col_oitavas{}
+
+.col_quartas{}
+
+.col_semi{}
+
+.col_final{}
