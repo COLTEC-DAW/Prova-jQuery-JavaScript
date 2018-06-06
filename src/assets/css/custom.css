@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Fifa World Cup';
+    src: url("../fonts/Dusha_-_FIFA_World_Cup_2018.ttf");
+}
+
+body {
+    background-image: url("../images/wallpaper.jpg");
+    font-family: 'Fifa World Cup';
+}
