@@ -17,7 +17,26 @@ body {
 
 .card{
     cursor: pointer;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
 }
+
+ul:hover li{
+    background-color: #dc3545;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 5px 10px 18px #3f3d3d;
+}
+
+.ul:hover {  
+    border: 1px solid rgba(0,0,0,.125);
+}
+
 
 .col_16avos{}
 
