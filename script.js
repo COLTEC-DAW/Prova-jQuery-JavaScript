@@ -139,32 +139,46 @@
                         proximo = $(champ).parents().next()[1];
                     }
                 }
-            
-                position = parseInt($(champ).parent().attr("id"));
-                console.log(position);
-                $($(proximo).find("li")[position]).text(champ.text());
 
-                // Troca nome dos perdedores
-                participantes = [];
-                if ($($(looser).parents()[2]).attr("class").includes("col_16avos")){
-                    participantes = participantes.concat($(".col_oitavas").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_quartas").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_semis").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_final").children().find("li").toArray());
-                }else if ($($(looser).parents()[2]).attr("class").includes("col_oitavas")){
-                    participantes = participantes.concat($(".col_quartas").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_semis").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_final").children().find("li").toArray());
-                }else if($($(looser).parents()[2]).attr("class").includes("col_quartas")){
-                    participantes = participantes.concat($(".col_semis").children().find("li").toArray());
-                    participantes = participantes.concat($(".col_final").children().find("li").toArray());
-                }else if($($(looser).parents()[2]).attr("class").includes("col_semis")){
-                    participantes = participantes.concat($(".col_final").children().find("li").toArray());
-                }
-                for(let i=0; i<participantes.length; i++){
-                    if($(participantes[i]).text() == $(looser).text()){
-                        $(participantes[i]).text($(champ).text());
+                if (proximo != undefined){
+                    // Coloca nome do vencedor no proximo
+                
+                    if($($(proximo).parents()[0]).attr("class").includes("col_final")){
+                        if($($(proximo).parents()[0]).attr("class").includes("direita")){
+                            console.log("uhu");
+                            $($(proximo).find("li")[position+1]).text(champ.text());    
+                        }else{
+                            $($(proximo).find("li")[position]).text(champ.text());
+                        }
+                    }else{
+                        position = parseInt($(champ).parent().attr("id"));
+                        console.log(position);
+                        $($(proximo).find("li")[position]).text(champ.text());
                     }
+                    
+                    // Troca nome dos perdedores
+                    participantes = [];
+                    if ($($(looser).parents()[2]).attr("class").includes("col_16avos")){
+                        participantes = participantes.concat($(".col_oitavas").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_quartas").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_semis").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_final").children().find("li").toArray());
+                    }else if ($($(looser).parents()[2]).attr("class").includes("col_oitavas")){
+                        participantes = participantes.concat($(".col_quartas").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_semis").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_final").children().find("li").toArray());
+                    }else if($($(looser).parents()[2]).attr("class").includes("col_quartas")){
+                        participantes = participantes.concat($(".col_semis").children().find("li").toArray());
+                        participantes = participantes.concat($(".col_final").children().find("li").toArray());
+                    }else if($($(looser).parents()[2]).attr("class").includes("col_semis")){
+                        participantes = participantes.concat($(".col_final").children().find("li").toArray());
+                    }
+                    for(let i=0; i<participantes.length; i++){
+                        if($(participantes[i]).text() == $(looser).text()){
+                            $(participantes[i]).text($(champ).text());
+                        }
+                    }
+
                 }
                 
                 // Volta pro jogo
