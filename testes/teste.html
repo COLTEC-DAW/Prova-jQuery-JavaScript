@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo</title>
+  <style>
+  p {
+    color: red;
+    margin: 5px;
+    cursor: pointer;
+  }
+  p:hover {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div class ="a" class = "hi">
+    <p>First Paragraph</p>
+</div>
+
+<div class ="b"  class = "hi">
+        <p>AAA Paragraph</p>
+    </div>
+    <div class ="c"  class = "hi">
+            <p>WOW Paragraph</p>
+        </div>
+         
+<script>
+$( "p" ).click(function() {
+    var x = document.getElementsByClassName('hi');
+    //var x = "hh";
+    console.log(x);
+
+});
+</script>
+ 
+</body>
+</html>
