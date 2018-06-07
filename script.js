@@ -142,10 +142,9 @@
 
                 if (proximo != undefined){
                     // Coloca nome do vencedor no proximo
-                
+                    console.log($($(champ).parents()[2]).attr("class"));
                     if($($(proximo).parents()[0]).attr("class").includes("col_final")){
-                        if($($(proximo).parents()[0]).attr("class").includes("direita")){
-                            console.log("uhu");
+                        if($($(champ).parents()[2]).attr("class").includes("direita")){
                             $($(proximo).find("li")[position+1]).text(champ.text());    
                         }else{
                             $($(proximo).find("li")[position]).text(champ.text());
