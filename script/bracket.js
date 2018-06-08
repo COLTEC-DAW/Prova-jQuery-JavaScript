@@ -4,9 +4,11 @@ var bracket = []
 window.onload = function(){
     let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href)
     let url = new URL(window.location.href);
+    let nome = url.searchParams.get("name");
     let aux = url.searchParams.get("bracket").split('-');
-    nome = aux.pop(aux.length - 1);
-    console.log(nome);
+
+    if(nome && nome != '')
+        document.getElementById('title').innerHTML = nome + "'s bracket";
 
     array.map((element) => {
         bracket.push(element);
@@ -38,14 +40,16 @@ function render (){
 }
 
 function shareTwitter(){
-    let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href)
-    window.open("https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text="+encodeURIComponent(window.location.href))
+    let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=" +
+    "My modãos bracket"
+    encodeURIComponent(window.location.href)
+    window.open(link);
 }
 
 function shareTumblr(){
-            window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='
-            +document.getElementById('author').innerHTML +'&content='
-            + document.getElementById('quoteText').innerHTML +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+            window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=bracketChallenge&caption='
+            +'my bracket' +'&content='
+            + encodeURIComponent(window.location.href) +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
 }
 
 var array = [

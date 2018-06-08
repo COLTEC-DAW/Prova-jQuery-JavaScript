@@ -7,11 +7,9 @@ $(document).ready(function(){
 });
 
 function round (){
-
     run(i);
 }
 function run (i){
-
     imageSetup(array[i], array[i+1]);
     soundSetup(array[i], array[i+1]);
 }
@@ -19,9 +17,10 @@ function run (i){
 function buttonClicked(btn){
     arrayAux.push(array[i+btn].id);
     arrayE.push(array[i+btn]);
+    console.log(window.location.href);
     if (array.length == 2) {
         let address = window.location.href.split('').splice(0, window.location.href.length-10).join('')+'template/bracket.html?bracket='+arrayAux.join('-')
-        address = address + '-' + document.getElementById('nome').value;
+        address = address + '&name=' + document.getElementById('nome').value;
 
         window.location.href = address;
 
@@ -80,6 +79,9 @@ function soundSetup (obj1, obj2){
     });
 }
 
+$(document).ready(function(){
+    $('.modal').modal();
+  });
 var array = [
     {
         "id": 0,
