@@ -1,0 +1,115 @@
+
+body{
+    background-image:  url("gramado/campo-de-futebol-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background: cover;
+}
+
+
+.times-oitavas{
+    margin: 3.5% auto 0;
+    width:100%;
+    height:11.5%;
+}
+
+.times-quartas{
+    margin: 30% auto 0;
+    width:100%;
+    height:11.5%;
+}
+
+.times-semi{
+    margin: 160% auto 0;
+    width:100%;
+    height:11.5%;
+}
+
+.times-final{
+    margin: 280% auto 0;
+    width:100%;
+    height:11.5%;
+}
+
+/* Times de Oitava: Escudos */
+
+#oitava-1{
+    background-image: url("times-escudos/180px-Escudo_do_Galo_Atual.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+   
+}
+#oitava-2{
+    background-image: url("times-escudos/bahia-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-3{
+    background-image: url("times-escudos/botafogo-escudo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-4{
+    background-image: url("times-escudos/Ceara-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-5{
+    background-image: url("times-escudos/cruzeiro1-logo.png");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-6{
+    background-image: url("times-escudos/escudo-do-Corinthians.png");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-7{
+    background-image: url("times-escudos/flamengo-logo.png");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-8{
+    background-image: url("times-escudos/fluminense-logo.png");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-9{
+    background-image: url("times-escudos/fortaleza-escudo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-10{
+    background-image: url("times-escudos/gremio-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-11{
+    background-image: url("times-escudos/inter-escudo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-12{
+    background-image: url("times-escudos/palmeiras-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-13{
+    background-image: url("times-escudos/santos-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-14{
+    background-image: url("times-escudos/sao-paulo-logo.png");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-15{
+    background-image: url("times-escudos/sport-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+#oitava-16{
+    background-image: url("times-escudos/vasco-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
