@@ -2,7 +2,7 @@
 body{
     background-image:  url("gramado/campo-de-futebol-wallpaper.jpg");
     background-repeat: no-repeat;
-    background: cover;
+    background-size: 100%;
 }
 
 
