@@ -14,25 +14,25 @@ function BinaryTree(){
 }
 
 function startBracket(tree) {    
-    // tree.setNode("fifa12.jpg", 4, 0);
-    // setImage("fifa12.jpg", 4, 0);
-    // tree.setNode("fifa15.jpg", 4, 1);
-    // setImage("fifa15.jpg", 4, 1);
+    tree.setNode("fifa12.jpg", 4, 0);
+    setImage("fifa12.jpg", 4, 0);
+    tree.setNode("fifa15.jpg", 4, 1);
+    setImage("fifa15.jpg", 4, 1);
     
-    // tree.setNode("fifa18.jpg", 4, 2);
-    // setImage("fifa18", 4, 2);
-    // tree.setNode("fifaMobile.jpg", 4, 3);
-    // setImage("fifaMobile", 4, 3);
+    tree.setNode("ronaldinhoSoccer97.jpg", 4, 2);
+    setImage("ronaldinhoSoccer97.jpg", 4, 2);
+    tree.setNode("fifaMobile.jpg", 4, 3);
+    setImage("fifaMobile.jpg", 4, 3);
     
-    // tree.setNode("fifaStreet1.jpg", 4, 4);
-    // setImage("fifaStreet1.", 4, 4);
-    // tree.setNode("fifaStreet2.jpg", 4, 5);
-    // setImage("fifaStreet2", 4, 5);
+    tree.setNode("fifaStreet1.jpg", 4, 4);
+    setImage("fifaStreet1.jpg", 4, 4);
+    tree.setNode("fifaStreet2.jpg", 4, 5);
+    setImage("fifaStreet2.jpg", 4, 5);
     
-    // tree.setNode("fifaStreet3.jpg", 4, 6);
-    // setImage("fifaStreet3", 4, 6);
-    // tree.setNode("fifaWorldCup14.jpg", 4, 7);
-    // setImage("fifaWorldCup14", 4, 7);
+    tree.setNode("fifaStreet3.jpg", 4, 6);
+    setImage("fifaStreet3.jpg", 4, 6);
+    tree.setNode("fifaWorldCup14.jpg", 4, 7);
+    setImage("fifaWorldCup14.jpg", 4, 7);
 
     // // Mid-Bracket
     
@@ -51,14 +51,14 @@ function startBracket(tree) {
     // tree.setNode("Ronaldinho-Soccer-97.jpg", 4, 13);
     // setImage("Ronaldinho-Soccer-97", 4, 13);
     
-    tree.setNode("winningEleven10.jpg", 4, 14);
-    setImage("winningEleven10.jpg", 4, 14);
-    tree.setNode("fifa12.jpg", 4, 15); // trocar imagem
-    setImage("fifa12.jpg", 4, 15);
+    // tree.setNode("winningEleven10.jpg", 4, 14);
+    // setImage("winningEleven10.jpg", 4, 14);
+    // tree.setNode("fifa12.jpg", 4, 15); // trocar imagem
+    // setImage("fifa12.jpg", 4, 15);
 }
 
-function makeWinnerChange(card, tree) {
-    var divID = $(card).children().children();
+function makeWinnerChange(games, tree) {
+    var divID = $(games).children().children();
     divID = divID[0].id;
     console.log(divID);
     var levelAndNode = divID.split("-");
@@ -83,6 +83,8 @@ function makeWinnerChange(card, tree) {
 
     tree.setNode(img, level-1, node);
     setImage(img, level-1, node);
+
+    console.log(divID);
 }
 
 function setImage(img, level, node) {
@@ -95,7 +97,7 @@ $(document).ready(function () {
     var tree = new BinaryTree();
     startBracket(tree);
 
-    $(".card").click(function() { 
+    $(".games").click(function() { 
         makeWinnerChange(this, tree);
     });
 });
