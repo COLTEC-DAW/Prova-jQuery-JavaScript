@@ -1,0 +1,40 @@
+.coluna {
+  height: 100vh; }
+
+.divisor {
+  border-left: 30px solid rgba(0, 0, 0, 0.2);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  height: 0;
+  width: 0; }
+
+.final {
+  height: 100vh; }
+
+.item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
+  padding: 5px; }
+
+.line {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  height: 0;
+  width: 100%; }
+
+.oitavas {
+  height: 12.5vh; }
+  .oitavas .item {
+    display: block; }
+
+.quartas {
+  height: 25vh; }
+
+.resultado {
+  height: 100vh; }
+
+.semi {
+  height: 50vh; }
+
+/*# sourceMappingURL=index.css.map */
