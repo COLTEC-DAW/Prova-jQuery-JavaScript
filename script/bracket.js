@@ -41,7 +41,7 @@ function render (){
 
 function shareTwitter(){
     let link = "https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=" +
-    "My modãos bracket"
+    "My modãos bracket: " +
     encodeURIComponent(window.location.href)
     window.open(link);
 }

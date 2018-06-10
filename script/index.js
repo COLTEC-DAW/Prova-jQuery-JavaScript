@@ -60,7 +60,7 @@ function soundSetup (obj1, obj2){
             url: obj2.audio
           });
 
-          $( "#img1" )
+          $( "#card1" )
               .mouseover(function() {
                   m1.play();
               })
@@ -68,7 +68,7 @@ function soundSetup (obj1, obj2){
                   m1.stop();
               });
 
-          $( "#img2" )
+          $( "#card2" )
               .mouseover(function() {
                   m2.play();
               })
@@ -79,9 +79,10 @@ function soundSetup (obj1, obj2){
     });
 }
 
-$(document).ready(function(){
-    $('.modal').modal();
-  });
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
 var array = [
     {
         "id": 0,
@@ -144,54 +145,54 @@ var array = [
         "nome": "Galopeira",
         "audio": "assets/audio/galopeira.mp3",
         "imagem": "assets/imagem/galopeira.jpg",
-        "texto": "Galopeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeira."
+        "texto": "Galopeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee..."
     },
     {
         "id": 9,
-        "nome": "Fio de Cabelo",
-        "audio": "assets/audio/fioDeCabelo.mp3",
-        "imagem": "assets/imagem/fioDeCabelo.jpg",
-        "texto": "E hoje o que encontrei me deixou mais triste um pedacinho dela que existe um fio de cabelo no meu paletó."
+        "nome": "Arapuca",
+        "audio": "assets/audio/arapuca.mp3",
+        "imagem": "assets/imagem/arapuca.jpg",
+        "texto": "Armei uma arapuca na beira da estrada pra pegar moça bonita e também mulher casada"
     },
     {
         "id": 10,
         "nome": "Ipê Florido",
         "audio": "assets/audio/ipeFlorido.mp3",
         "imagem": "assets/imagem/ipeFlorido.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Meu ipê florido junto à minha cela hoje tem altura de minha janela."
     },
     {
         "id": 11,
         "nome": "O Rei do Gado",
         "audio": "assets/audio/reiDoGado.mp3",
         "imagem": "assets/imagem/reiDoGado.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Sou desse chão onde o rei é peão com o laço na mão."
     },
     {
         "id": 12,
         "nome": "Majestade o Sabia",
         "audio": "assets/audio/majestadeOSabia.mp3",
         "imagem": "assets/imagem/majestadeOSabia.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Em minha volta sinfonia de pardais cantando para a majestade, o sabiá."
     },
     {
         "id": 13,
         "nome": "É o Amor",
         "audio": "assets/audio/eOAmor.mp3",
         "imagem": "assets/imagem/eOAmor.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "É o amor que mexe com minha cabeça e me deixa assim."
     },
     {
         "id": 14,
         "nome": "Fuscão Preto",
         "audio": "assets/audio/fuscaoPreto.mp3",
         "imagem": "assets/imagem/fuscaoPreto.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Me disseram que ela foi vista com outro num fuscão preto pela cidade a rodar bem vestida igual a dama da noite cheirando álcool e fumando sem parar."
     },
     {
         "id": 15,
         "nome": "Chalana",
         "audio": "assets/audio/chalana.mp3",
         "imagem": "assets/imagem/chalana.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Oh! Chalana sem querer tu aumentas minha dor."
     }]

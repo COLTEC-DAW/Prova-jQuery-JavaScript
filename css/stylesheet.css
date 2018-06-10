@@ -1,17 +1,33 @@
+#logo{
+    padding: 2px !important;
+    margin-top: 0px;
+}
 #nav{
-    margin-top: 2%;
+    margin-bottom: 8vh;
 }
 #title{
     font-style: italic;
-    font-size: 2em;
+    font-size: 1.3em;
     font-family: 'Inconsolata', monospace;
     color: rgb(69, 40, 14);
     border:  color: rgb(69, 40, 14);
     margin-top: 2%;
 }
 #card1, #card2 {
+    margin-bottom: 10%;
+}
+#inputG{
+        height: 4%;
+}
+#modal{
+    font-size: 0.65em;
 }
 .cardTitle{
     background-color: rgb(246, 250, 230) !important;
     color: rgb(69, 40, 14);
+}
+.card:hover{
+    box-shadow: 4px 8px 6px 8px rgba(1, 1, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1);
+
 }
