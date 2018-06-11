@@ -27,40 +27,7 @@
         }
 
         //função para sortear os confrontos dos 16avos de final
-        function sorteiaConfrontos() {
-            var nomes = ["Artur",
-                "Fofão",
-                "Bryan",
-                "Caio",
-                "Dener",
-                "Veazey",
-                "Germano",
-                "Gui",
-                "Futebol",
-                "Paloma",
-                "Ícaro",
-                "Caxueira",
-                "Bernola",
-                "Biscoito",
-                "Mari",
-                "Matheus",
-                "Mathias",
-                "Rei",
-                "Rita",
-                "Will",
-                "Piu-Piu",
-                "Vitor",
-                "Chrys",
-                "Phelps",
-                "Pedro",
-                "Raquel",
-                "Léo",
-                "Ângelo",
-                "Miguel",
-                "Filipe",
-                "Enzo",
-                "Henrique"]
-
+        function sorteiaConfrontos(nomes) {
 
             var vetorAleatorio = geradorDeVetor();
             var card16avos = $(".col_16avos").find("li"); //pegar todos os "li" das 16-avos de final
@@ -72,7 +39,40 @@
 
         $(document).ready(function () {
             
-            sorteiaConfrontos();
+            var nomes = ["Artur",
+            "Fofão",
+            "Bryan",
+            "Caio",
+            "Dener",
+            "Veazey",
+            "Germano",
+            "Gui",
+            "Futebol",
+            "Paloma",
+            "Ícaro",
+            "Caxueira",
+            "Bernola",
+            "Biscoito",
+            "Mari",
+            "Matheus",
+            "Mathias",
+            "Rei",
+            "Rita",
+            "Will",
+            "Piu-Piu",
+            "Vitor",
+            "Chrys",
+            "Phelps",
+            "Pedro",
+            "Raquel",
+            "Gustavo",
+            "Angelo",
+            "Miguel",
+            "Maromba",
+            "Lola",
+            "Henrique"]
+
+            sorteiaConfrontos(nomes);
             var chave = [];
             chave[0] = "diferente de nada";
             chave[1] = "difente de nada";
@@ -106,6 +106,7 @@
                 chave[1] = $($(this).siblings()[0]);
                 
                 if(chave[1].text() != "" && chave[0].text() != ""){
+
                     var width100 = 100;
                     $("#confronto").css("display", "block");
                     $(".opcao img").animate({
@@ -120,6 +121,9 @@
                         $($(".opcao").children()[1]).text(chave[1].text());
                         $($(".opcao").children()[3]).text(chave[0].text());     
                     }
+                    
+                    $("#imagem_um").attr("src", "alunos/" + nomes.indexOf($("#imagem_um").next().text()) +".jpeg");  //coloca a imagem correta
+                    $("#imagem_dois").attr("src", "alunos/" + nomes.indexOf($("#imagem_dois").next().text()) +".jpeg"); //coloca a imagem correta
                 }
            });
 
@@ -184,5 +188,12 @@
                 $("#confronto").css("display", "none");
                 $("#confronto .opcao img").css({"width":"10px", "height":"10px"})
            });
+
+           //sistema para autoria de elaboração do bracket e compartilhamento(não finalizado)
+            $("#Autoria div").children("button").click(function () {
+                $("#NomeAutor").prop("disabled", true);
+                $(this).text("Compartilhar")
+            })
+
         });
 

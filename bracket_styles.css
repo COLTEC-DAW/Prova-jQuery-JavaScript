@@ -13,6 +13,10 @@ body{
 	font-size: 60px;
 }
 
+.btn {
+    background-image: url(background_letra.gif)
+}
+
 
 .row{
     flex-wrap: unset !important;
@@ -35,7 +39,7 @@ body{
 }
 
 ul:hover li{
-    background-color: #dc3545;
+    background-image: url(background_letra.gif);
     color: white;
 }
 
