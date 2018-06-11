@@ -13,9 +13,9 @@
 
         <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
             <img  id="logo" class="offset-md-1 offset-lg-1 d-none d-md-block col-md-1 col-lg-1" src="assets/imagem/logo.png" alt=""/>
-            <h1 class="col-md-4 col-lg-5 d-none d-md-block navbar-brand" id="title"  >Bracket Challenge: "Modãos" edition</h1>
+            <h1 class="col-md-5 col-lg-5 d-none d-md-block navbar-brand" id="title"  >Bracket Challenge: "Modãos" edition</h1>
 
-
+            <!-- MODAL  -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
               Instructions
             </button>
@@ -38,15 +38,16 @@
                 </div>
             </div>
 
+            <!-- Collapsable -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li id="inputG" class="nav-item active">
-                    <div  class="offset-md-1 offset-lg-1 col-md-10 input-group">
+                <li  class="nav-item active">
+                    <div class="offset-md-1 offset-lg-1 col-md-10 input-group">
                         <div class="input-group-prepend">
-                        <span class="input-group-text">Nome: </span>
+                        <span id="ig1" class="input-group-text">Nome: </span>
                         </div>
                         <textarea id="nome" class="form-control" aria-label="With textarea"></textarea>
                     </div>
@@ -57,9 +58,9 @@
           </div>
 
         </nav>
-        <div id="canvas" class="container">
+        <div id="canvas" class="container-fluid">
             <div class="row">
-                <div class="offset-lg-1 col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(0)">
+                <div id="fc1" class="fullCard offset-lg-1 col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(0)">
                     <div id="card1" class="card">
                         <img class="card-img-top" id="img1" src="">
                         <div class="card-body">
@@ -69,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="offset-lg-1 col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(1)">
+                <div id="fc2" class="fullCard col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(1)">
                     <div id="card2" class="card">
                         <img class="card-img-top" id="img2" src="">
                         <div class="card-body">

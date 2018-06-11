@@ -3,6 +3,9 @@ var arrayE = [];
 var i = 0;
 
 $(document).ready(function(){
+
+    let nav = $('#nav').css('height');
+    $("#canvas").css('margin-top', nav);
     round();
 });
 

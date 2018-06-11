@@ -2,9 +2,6 @@
     padding: 2px !important;
     margin-top: 0px;
 }
-#nav{
-    margin-bottom: 8vh;
-}
 #title{
     font-style: italic;
     font-size: 1.3em;
@@ -15,9 +12,14 @@
 }
 #card1, #card2 {
     margin-bottom: 10%;
+    padding: 0px;
 }
-#inputG{
-        height: 4%;
+#fc1, #fc2{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+#g1, #nome{
+    height: 40px;
 }
 #modal{
     font-size: 0.65em;
@@ -28,6 +30,8 @@
 }
 .card:hover{
     box-shadow: 4px 8px 6px 8px rgba(1, 1, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: scale(1.1);
-
+    transform: scale(1.1)
+}
+.fullCard{
+    padding: 0px;
 }
