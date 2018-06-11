@@ -7,8 +7,6 @@
     font-size: 1.3em;
     font-family: 'Inconsolata', monospace;
     color: rgb(69, 40, 14);
-    border:  color: rgb(69, 40, 14);
-    margin-top: 2%;
 }
 #card1, #card2 {
     margin-bottom: 10%;
@@ -34,4 +32,8 @@
 }
 .fullCard{
     padding: 0px;
+}
+
+#combate{
+    margin-top: 3%;
 }

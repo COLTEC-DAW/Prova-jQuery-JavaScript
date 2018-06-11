@@ -1,11 +1,12 @@
 var arrayAux = [];
 var arrayE = [];
 var i = 0;
+var m = []
 
 $(document).ready(function(){
 
     let nav = $('#nav').css('height');
-    $("#canvas").css('margin-top', nav);
+    $("#canvas").css('margin-top', nav/2);
     round();
 });
 
@@ -50,34 +51,45 @@ function imageSetup(obj1, obj2){
     $('#text2').html(obj2.texto);
 
 }
+
+
 function soundSetup (obj1, obj2){
     soundManager.setup({
       // where to find flash audio SWFs, as needed
       url: '/path/to/swf-files/',
+
       onready: function() {
 
-          var m1 = soundManager.createSound({
+        soundManager.stopAll();
+        if(m[obj1.id]){
+            m[obj1.id].destruct();
+            m[obj2.id].destruct();
+        }
+        m[obj1.id] =  soundManager.createSound({
             url: obj1.audio
-          });
-          var m2 = soundManager.createSound({
-            url: obj2.audio
-          });
+        });
+        m[obj2.id] = soundManager.createSound({
+        url: obj2.audio
+        });   
+        $( "#card1" ).unbind();
+        $( "#card2" ).unbind();
 
-          $( "#card1" )
-              .mouseover(function() {
-                  m1.play();
-              })
-              .mouseout(function (){
-                  m1.stop();
-              });
+   
+        $( "#card1" )
+            .mouseover(function() {
+                m[obj1.id].play();
+            })
+            .mouseout(function (){
+                m[obj1.id].stop();
+            });
 
-          $( "#card2" )
-              .mouseover(function() {
-                  m2.play();
-              })
-              .mouseout(function (){
-                  m2.stop();
-              });
+        $( "#card2" )
+            .mouseover(function() {
+                m[obj2.id].play();
+            })
+            .mouseout(function (){
+                m[obj2.id].stop();
+            }); 
       }
     });
 }
@@ -199,3 +211,5 @@ var array = [
         "imagem": "assets/imagem/chalana.jpg",
         "texto": "Oh! Chalana sem querer tu aumentas minha dor."
     }]
+
+    
