@@ -13,7 +13,7 @@
 
 .item {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  display: none;
+  visibility: hidden;
   padding: 5px; }
 
 .line {
@@ -26,7 +26,7 @@
 .oitavas {
   height: 12.5vh; }
   .oitavas .item {
-    display: block; }
+    visibility: visible; }
 
 .quartas {
   height: 25vh; }
