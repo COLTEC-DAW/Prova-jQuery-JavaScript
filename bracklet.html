@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bracket_styles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animacao.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -21,16 +21,26 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="opcao col-sm-5 align-self-center text-center">
-                    <img src="img/teste1.jpg" id="imagem_um" alt="motocross">
-                    <h3>Motocross</h3>
+                    <img id="imagem_um" alt="motocross">
+                    <h3></h3>
                 </div>
                 <img id="vs" class="col-sm-2 align-self-center" src="img/vs.png" alt="versus">
                 <div class="opcao col-sm-5 align-self-center text-center">
-                    <img src="img/teste2.jpg" id="imagem_dois" alt="paes">
-                    <h3>Pães</h3>
+                    <img id="imagem_dois" alt="paes">
+                    <h3></h3>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="pyro d-none">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+
+
+    <div class="Letra-Customizada">
+        <h1 id="campeao" class="text-center font-weight-bold"></h1>
     </div>
     
     <div class="container mx-auto">
@@ -164,7 +174,6 @@
 
             <!--Coluna - final-->
             <div class="col d-flex align-items-center col_final">
-
                 <div class="card">
 
                     <div class="card-header font-weight-bold text-center">

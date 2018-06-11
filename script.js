@@ -22,7 +22,6 @@
                 }
              verificacao = false;
             }
-            console.log(vetor);
             return vetor;
         }
 
@@ -144,9 +143,9 @@
                     }
                 }
 
-                if (proximo != undefined){
+                var i;
+                if ($($(proximo).parents()[0]).attr("class") != undefined){
                     // Coloca nome do vencedor no proximo
-                    console.log($($(champ).parents()[2]).attr("class"));
                     if($($(proximo).parents()[0]).attr("class").includes("col_final")){
                         if($($(champ).parents()[2]).attr("class").includes("direita")){
                             $($(proximo).find("li")[position+1]).text(champ.text());    
@@ -155,7 +154,6 @@
                         }
                     }else{
                         position = parseInt($(champ).parent().attr("id"));
-                        console.log(position);
                         $($(proximo).find("li")[position]).text(champ.text());
                     }
                     
@@ -176,23 +174,32 @@
                     }else if($($(looser).parents()[2]).attr("class").includes("col_semis")){
                         participantes = participantes.concat($(".col_final").children().find("li").toArray());
                     }
-                    for(let i=0; i<participantes.length; i++){
+                    for(i=0; i<participantes.length; i++){
                         if($(participantes[i]).text() == $(looser).text()){
                             $(participantes[i]).text($(champ).text());
                         }
                     }
 
                 }
-                
+
+                // Se for final
+                if($($(champ).parents()[2]).attr("class").includes("col_final")){
+                    console.log("acabou");
+                    $("#campeao").text("Parabéns " + $(champ).text() + ", nosso campeão!");
+                    $(".pyro").attr("class", "pyro d-block");
+
+                }
+
                 // Volta pro jogo
                 $("#confronto").css("display", "none");
-                $("#confronto .opcao img").css({"width":"10px", "height":"10px"})
+                $("#confronto .opcao img").css({"width":"10px", "height":"10px"});
+
            });
 
            //sistema para autoria de elaboração do bracket e compartilhamento(não finalizado)
             $("#Autoria div").children("button").click(function () {
                 $("#NomeAutor").prop("disabled", true);
-                $(this).text("Compartilhar")
+                $(this).text("Compartilhar");
             })
 
         });
