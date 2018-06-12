@@ -1,6 +1,54 @@
 #col1, #col2, #col3{
-    /* background-color: black; */
 }
+
+body{
+    font-family: 'Sunflower';
+    background-color: blanchedalmond;
+}
+
+#bg { 
+    /* The image used */
+    background-image: url("assets/imagem/wallpaper.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.elementText{
+    background-color: bisque;
+}
+
+#tumblr{
+    margin-top: 35px;
+    margin-left: 5px;
+    background-color: chocolate;
+}
+
+#twitter{
+    margin-top: 35px;
+    background-color: chocolate;
+}
+
+#title{
+    font-size: 200%;
+    text-align: center;
+}
+
+#logo{
+    margin-top: 1.5px;
+    height: 100px;
+    width: auto;
+}
+
+#topo{
+    background-color: peru;
+}
+
 @media only screen and (max-width: 599px) {
 
     .elementText{
