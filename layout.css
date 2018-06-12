@@ -2,100 +2,99 @@
     color: red;
     margin: 5px;
     cursor: pointer;
-  }
+}
 .movie_02 {
-color: blue;
+color: rgb(0, 255, 242);
 margin: 5px;
 cursor: pointer;
 }
 .movie_03 {
-color: blue;
+color: rgb(107, 107, 165);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_03 {
-color: blue;
+.movie_04 {
+color: green;
 margin: 5px;
 cursor: pointer;
 }
 
 .movie_05 {
-color: blue;
+color: black;
 margin: 5px;
 cursor: pointer;
 }
 
 .movie_06 {
-color: blue;
+color: brown;
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_07 {
+color: yellowgreen;
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_08 {
+color: rgb(14, 167, 154);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_09 {
+color: rgb(255, 0, 212);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_10 {
+color: rgb(10, 112, 82);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_11 {
+color: rgb(134, 25, 49);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_12 {
+color: rgb(32, 83, 59);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_13 {
+color: rgb(35, 104, 64);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_14 {
+color: rgb(116, 111, 53);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_15 {
+color: rgb(11, 11, 112);
 margin: 5px;
 cursor: pointer;
 }
 
-.movie_01 {
-color: blue;
+.movie_16 {
+color: rgba(45, 129, 129, 0.507);
 margin: 5px;
 cursor: pointer;
 }
 
 
- 
-  .default {
-    color: grey;
-    margin: 5px;
-    cursor: pointer;
-  }
+.default {
+  color: grey;
+  margin: 5px;
+  cursor: pointer;
+}
