@@ -1,4 +1,3 @@
-
 function BinaryTree(){ 
     this.btSMF=function(level,node){
         return node+(1<<level)-1;
@@ -10,6 +9,33 @@ function BinaryTree(){
     }
     this.getNode = function(level,node){
         return this.Nodes[this.btSMF(level,node)];
+    }
+}
+
+function verifyingTheQueryString(tree) {
+    if (window.location.search.indexOf('r=') > -1) {
+        var queryString = window.location.search;
+        queryString = queryString.substring(3);
+        
+        let queries = queryString.split("&");
+        startBracketShared(tree, queries);
+    } else {
+        return;
+    }
+}
+
+function startBracketShared(tree, queries) {
+    var level = -1;
+    for (let index = 0; index < queries.length; index++) {
+        let imageNode = queries[index].split("=");
+        if (imageNode[0]==0) {
+            level+=1;
+        }
+
+        if(new String(imageNode[1]).valueOf() != new String("n/A").valueOf()) {
+            tree.setNode(level, imageNode[1]);
+            setImage(imageNode[1], level, imageNode[0])
+        }
     }
 }
 
@@ -97,7 +123,7 @@ function counting(level, node, tree) {
         images.push(tree.getNode(level, node+1));
     }
 
-    console.log(images);
+    // console.log(images);
     return images;
 }
 
@@ -106,13 +132,13 @@ function setImageAuxiliar(imagesOfTheParent, img, level, node, tree, imageVerify
     node=dividingNode(node);
     
     imageVerifying = tree.getNode(level, node);
-    console.log(level);
+    // console.log(level);
     
     if (imageVerifying == null) {
         return;
     }
-    console.log(imagesOfTheParent);
-    console.log(imageVerifying + imagesOfTheParent[0] + imagesOfTheParent[1]);
+    // console.log(imagesOfTheParent);
+    // console.log(imageVerifying + imagesOfTheParent[0] + imagesOfTheParent[1]);
 
     if (new String(imageVerifying).valueOf() == new String(imagesOfTheParent[0]).valueOf() ||
         new String(imageVerifying).valueOf() == new String(imagesOfTheParent[1]).valueOf()) 
@@ -146,11 +172,41 @@ function setImage(img, level, node) {
         .src = "./assets/images/" + img;
 }
 
+function shareContent(tree) {
+    var content = new Array();
+
+    for (let level = 0; level < 5; level++) {
+        content[level] = new Array();
+        for (let node = 0; node < (1<<level); node++) {
+            if (tree.getNode(level, node) == null) {
+                content[level].push({name: node, value: "n/A"});
+            } else {
+                content[level].push({name: node, value: tree.getNode(level, node)});
+            }
+                          
+        }
+    }
+    
+    return content;
+}
+
 $(document).ready(function () {
     var tree = new BinaryTree();
     startBracket(tree);
 
+    verifyingTheQueryString(tree);
+
     $(".games").click(function() { 
         makeWinnerChange(this, tree);
+    });
+
+    $("#btn-share-facebook").click(function() {
+        
+       var content=shareContent(tree);
+       var recursiveDecoded = decodeURIComponent($.param(content[0])) + "&"
+                            + decodeURIComponent($.param(content[1])) + "&"
+                            + decodeURIComponent($.param(content[2])) + "&"
+                            + decodeURIComponent($.param(content[3]));
+       window.open(window.location.href + "?r=" + recursiveDecoded);
     });
 });
