@@ -1,0 +1,100 @@
+.movie_01 {
+    color: red;
+    margin: 5px;
+    cursor: pointer;
+}
+.movie_02 {
+color: rgb(0, 255, 242);
+margin: 5px;
+cursor: pointer;
+}
+.movie_03 {
+color: rgb(107, 107, 165);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_04 {
+color: green;
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_05 {
+color: black;
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_06 {
+color: brown;
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_07 {
+color: yellowgreen;
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_08 {
+color: rgb(14, 167, 154);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_09 {
+color: rgb(255, 0, 212);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_10 {
+color: rgb(10, 112, 82);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_11 {
+color: rgb(134, 25, 49);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_12 {
+color: rgb(32, 83, 59);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_13 {
+color: rgb(35, 104, 64);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_14 {
+color: rgb(116, 111, 53);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_15 {
+color: rgb(11, 11, 112);
+margin: 5px;
+cursor: pointer;
+}
+
+.movie_16 {
+color: rgba(45, 129, 129, 0.507);
+margin: 5px;
+cursor: pointer;
+}
+
+
+.default {
+  color: grey;
+  margin: 5px;
+  cursor: pointer;
+}
