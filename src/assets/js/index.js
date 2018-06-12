@@ -40,47 +40,45 @@ function startBracketShared(tree, queries) {
 }
 
 function startBracket(tree) {    
-    tree.setNode("fifa12.jpg", 4, 0);
-    setImage("fifa12.jpg", 4, 0);
+    tree.setNode("pes13.jpg", 4, 0);
+    setImage("pes13.jpg", 4, 0);
     tree.setNode("fifa15.jpg", 4, 1);
     setImage("fifa15.jpg", 4, 1);
     
     tree.setNode("ronaldinhoSoccer97.jpg", 4, 2);
     setImage("ronaldinhoSoccer97.jpg", 4, 2);
-    tree.setNode("fifaMobile.jpg", 4, 3);
-    setImage("fifaMobile.jpg", 4, 3);
+    tree.setNode("bombaPatch.jpg", 4, 3);
+    setImage("bombaPatch.jpg", 4, 3);
     
     tree.setNode("fifaStreet1.jpg", 4, 4);
     setImage("fifaStreet1.jpg", 4, 4);
-    tree.setNode("fifaStreet2.jpg", 4, 5);
-    setImage("fifaStreet2.jpg", 4, 5);
+    tree.setNode("winningEleven10.jpg", 4, 5);
+    setImage("winningEleven10.jpg", 4, 5);
     
     tree.setNode("fifaStreet3.jpg", 4, 6);
     setImage("fifaStreet3.jpg", 4, 6);
     tree.setNode("fifaWorldCup14.jpg", 4, 7);
     setImage("fifaWorldCup14.jpg", 4, 7);
-
-    // Mid-Bracket
     
-    // tree.setNode("internationalSuperStarSoccer.jpg", 4, 8);
-    // setImage("internationalSuperStarSoccer.jpg", 4, 8);
-    // tree.setNode("pes10.jpg", 4, 9);
-    // setImage("pes10.jpg", 4, 9);
+    tree.setNode("internationalSuperStarSoccer.jpg", 4, 8);
+    setImage("internationalSuperStarSoccer.jpg", 4, 8);
+    tree.setNode("fifaMobile.jpg", 4, 9);
+    setImage("fifaMobile.jpg", 4, 9);
     
-    // tree.setNode("pes13.jpg", 4, 10);
-    // setImage("pes13.jpg", 4, 10);
-    // tree.setNode("pes18.jpg", 4, 11);
-    // setImage("pes18.jpg", 4, 11);
+    tree.setNode("pes10.jpg", 4, 10);
+    setImage("pes10.jpg", 4, 10);
+    tree.setNode("fifa12.jpg", 4, 11);
+    setImage("fifa12.jpg", 4, 11);
     
-    // tree.setNode("pesMobile.jpg", 4, 12);
-    // setImage("pesMobile.jpg", 4, 12);
-    // tree.setNode("Ronaldinho-Soccer-97.jpg", 4, 13);
-    // setImage("ronaldinhoSoccer97.jpg", 4, 13);
+    tree.setNode("pesMobile.jpg", 4, 12);
+    setImage("pesMobile.jpg", 4, 12);
+    tree.setNode("fifaStreet2.jpg", 4, 13);
+    setImage("fifaStreet2.jpg", 4, 13);
     
-    // tree.setNode("winningEleven10.jpg", 4, 14);
-    // setImage("winningEleven10.jpg", 4, 14);
-    // tree.setNode("fifa12.jpg", 4, 15); // trocar imagem
-    // setImage("fifa12.jpg", 4, 15);
+    tree.setNode("pes18.jpg", 4, 14);
+    setImage("pes18.jpg", 4, 14);
+    tree.setNode("fifa18.jpg", 4, 15); // trocar imagem
+    setImage("fifa18.jpg", 4, 15);
 }
 
 function makeWinnerChange(games, tree) {
@@ -95,8 +93,9 @@ function makeWinnerChange(games, tree) {
     img = img[img.length-1];
 
     if(level === 0) {
-        // TODO: the request to share
-        // TODO: Show the image that won and play an audio of it
+
+        // TODO: Compartilhamento - Modal com a imagem do bracket
+        // TODO: Mostrar a imagem do campeão e tocar uma música/áudio
     }
 
     imagesOfTheParent = counting(level, node, tree);
@@ -128,8 +127,8 @@ function counting(level, node, tree) {
 }
 
 function setImageAuxiliar(imagesOfTheParent, img, level, node, tree, imageVerifying) {
-    level-=1;
-    node=dividingNode(node);
+    level -= 1;
+    node = dividingNode(node);
     
     imageVerifying = tree.getNode(level, node);
     // console.log(level);
@@ -140,15 +139,13 @@ function setImageAuxiliar(imagesOfTheParent, img, level, node, tree, imageVerify
     // console.log(imagesOfTheParent);
     // console.log(imageVerifying + imagesOfTheParent[0] + imagesOfTheParent[1]);
 
-    if (new String(imageVerifying).valueOf() == new String(imagesOfTheParent[0]).valueOf() ||
-        new String(imageVerifying).valueOf() == new String(imagesOfTheParent[1]).valueOf()) 
-        {
+    if (new String(imageVerifying).valueOf() == new String(imagesOfTheParent[0]).valueOf() || 
+    new String(imageVerifying).valueOf() == new String(imagesOfTheParent[1]).valueOf())  {
 
         if (new String(img).valueOf() != new String(imageVerifying).valueOf()) {
             setImage(img, level, node);
             tree.setNode(img, level, node);
-            setImageAuxiliar(imagesOfTheParent, img, level, node, 
-                                tree, imageVerifying);
+            setImageAuxiliar(imagesOfTheParent, img, level, node, tree, imageVerifying);
         } else {
             return;
         } 
@@ -196,11 +193,15 @@ $(document).ready(function () {
 
     verifyingTheQueryString(tree);
 
+    $("#btn-modal-video").click(function() {
+        $("#modal1").modal(); 
+    });
+
     $(".games").click(function() { 
         makeWinnerChange(this, tree);
     });
 
-    $("#btn-share-facebook").click(function() {
+    $("#btn-share").click(function() {
         
        var content=shareContent(tree);
        var recursiveDecoded = decodeURIComponent($.param(content[0])) + "&"
