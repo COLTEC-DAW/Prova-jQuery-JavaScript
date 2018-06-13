@@ -17,14 +17,15 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="ml-auto navbar-nav mr-2">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-3" placeholder="Nome">
+                    <input id="nome" class="form-control mr-3" placeholder="Nome">
                 </form>
                 <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#regras">Regras</a>
                 <div class="modal fade" id="regras" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="modalLabel">
+                                    Regras do Bracket</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -231,7 +232,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Share</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle"><span id="nome_Share"></span> Compartilhe seu Bracket</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

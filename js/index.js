@@ -4,6 +4,8 @@ $('.disputa').find('.item').each(function () {
         atual.parent().find('.item').removeClass('.active')
         atual.addClass('.active')
         updateNext(atual)
+        atual.animate({opacity: 0.2}, 600, 'linear')
+        atual.animate({opacity: 1}, 600, 'linear');
     })
 })
 

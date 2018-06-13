@@ -3,7 +3,9 @@ function share(){
     $(".eliminatorias").each(function(){
         obj[$(this).attr('id')] = $(this).html().replace(/\s/g, '');
     })
+    obj['nome'] = $('#nome').val()
     $("#link").val(`${$(location).attr('href')}?bracket=${JSON.stringify(obj)}`)
+    $('#nome_Share').html($("#nome").val());
     $('#share').modal('show');
 }
 
@@ -24,6 +26,7 @@ if($.urlParam('bracket') != 0){
         const btn = $(`#${key}`)
         $(btn[0]).html(obj[key]);
     }
+    $('#nome').val(obj['nome']);
     $(".item").each(function(){
         var grand = $(this).parent().parent();
         var son = $('#'+$(this).parent().attr('next'))
@@ -32,4 +35,5 @@ if($.urlParam('bracket') != 0){
             grand.find('.divisor').css('border-left-color', '#32CD32');
         }
     })
+    window.history.pushState("", "", "/");
 }
