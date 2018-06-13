@@ -19,15 +19,6 @@ function updateNext(atual) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+$('#resultado').click(function(){
+    share();
+})
