@@ -1,0 +1,8 @@
+img{
+  width:100px;height:64px;
+  padding-top: 10px;
+}
+
+#oitavas, #quartas, #semi, #final, #vencedor{
+  display: inline-block;
+}
