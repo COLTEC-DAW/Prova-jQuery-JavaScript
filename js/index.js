@@ -27,13 +27,6 @@ $(".final").find(".item").each(function(){
         let node = $(".resultado").find(".item").get($(this).parents(".final").index())
         $(node).html($(this).html())
         $(node).css('visibility', 'visible');
+        share();
     })
 })
-
-function update(node, value){
-    $(".eliminatorias").each(function(){
-        if($(this).html() == $(node).html() && $(this).html() != ""){
-            $(this).html(value);
-        }
-    })
-}
