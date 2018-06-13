@@ -1,3 +1,4 @@
+
 function BinaryTree(){ 
     this.btSMF=function(level,node){
         return node+(1<<level)-1;
@@ -12,10 +13,26 @@ function BinaryTree(){
     }
 }
 
+// function retriveDataFromJson(tree, fun) {
+//     var xmlhttp = new XMLHttpRequest();
+//     var url = "./assets/js/content.json";
+
+//     xmlhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             let JSONcontentFile = JSON.parse(this.responseText);
+//             fun(tree, JSONcontentFile);
+//         }
+//     };
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send(); 
+// }
+
 function verifyingTheQueryString(tree) {
     if (window.location.search.indexOf('r=') > -1) {
+        let url = new URL(window.location.href)
         var queryString = window.location.search;
         queryString = queryString.substring(3);
+        console.log(queryString);
         
         let queries = queryString.split("&");
         startBracketShared(tree, queries);
@@ -35,51 +52,33 @@ function startBracketShared(tree, queries) {
         if(new String(imageNode[1]).valueOf() != new String("n/A").valueOf()) {
             tree.setNode(level, imageNode[1]);
             setImage(imageNode[1], level, imageNode[0])
+            console.log(imageNode[1], level, imageNode[0]);
         }
     }
 }
 
-function startBracket(tree) {    
-    tree.setNode("pes13.jpg", 4, 0);
-    setImage("pes13.jpg", 4, 0);
-    tree.setNode("fifa15.jpg", 4, 1);
-    setImage("fifa15.jpg", 4, 1);
-    
-    tree.setNode("ronaldinhoSoccer97.jpg", 4, 2);
-    setImage("ronaldinhoSoccer97.jpg", 4, 2);
-    tree.setNode("bombaPatch.jpg", 4, 3);
-    setImage("bombaPatch.jpg", 4, 3);
-    
-    tree.setNode("fifaStreet1.jpg", 4, 4);
-    setImage("fifaStreet1.jpg", 4, 4);
-    tree.setNode("winningEleven10.jpg", 4, 5);
-    setImage("winningEleven10.jpg", 4, 5);
-    
-    tree.setNode("fifaStreet3.jpg", 4, 6);
-    setImage("fifaStreet3.jpg", 4, 6);
-    tree.setNode("fifaWorldCup14.jpg", 4, 7);
-    setImage("fifaWorldCup14.jpg", 4, 7);
-    
-    tree.setNode("internationalSuperStarSoccer.jpg", 4, 8);
-    setImage("internationalSuperStarSoccer.jpg", 4, 8);
-    tree.setNode("fifaMobile.jpg", 4, 9);
-    setImage("fifaMobile.jpg", 4, 9);
-    
-    tree.setNode("pes10.jpg", 4, 10);
-    setImage("pes10.jpg", 4, 10);
-    tree.setNode("fifa12.jpg", 4, 11);
-    setImage("fifa12.jpg", 4, 11);
-    
-    tree.setNode("pesMobile.jpg", 4, 12);
-    setImage("pesMobile.jpg", 4, 12);
-    tree.setNode("fifaStreet2.jpg", 4, 13);
-    setImage("fifaStreet2.jpg", 4, 13);
-    
-    tree.setNode("pes18.jpg", 4, 14);
-    setImage("pes18.jpg", 4, 14);
-    tree.setNode("fifa18.jpg", 4, 15); // trocar imagem
-    setImage("fifa18.jpg", 4, 15);
+function startBracket(tree, json) {
+    for (let index = 0; index < json.tree.length; index++) {
+        let element = json.tree[index];
+        tree.setNode(element.img, element.level, element.node);
+        setImage(element.img, element.level, element.node);
+    }    
 }
+
+function attrSrcVideo (tree, json) {
+    var video = document.getElementById("video");
+    var winner = tree.getNode(0,0);
+    for (let index = 0; index < json.tree.length; index++) {
+        let element = json.tree[index];
+        if (new String(winner).valueOf() == new String(element.img).valueOf()) {
+            video.src = element.video;
+            console.log(element.video);
+            break;
+        }
+    }  
+    
+    $('#modal1').modal('show');
+}    
 
 function makeWinnerChange(games, tree) {
     var divID = $(games).children().children();
@@ -92,24 +91,25 @@ function makeWinnerChange(games, tree) {
     img = img.split("/");
     img = img[img.length-1];
 
+    imagesOfTheParent = counting(level, node, tree);
+    
+    node = dividingNode(node);  
+    level -= 1;
+    
+    let imageVerifying = tree.getNode(level, node);
+    
+    setImage(img, level, node);
+    tree.setNode(img, level, node);
+    
     if(level === 0) {
-
+        attrSrcVideo(tree, content);
         // TODO: Compartilhamento - Modal com a imagem do bracket
         // TODO: Mostrar a imagem do campeão e tocar uma música/áudio
     }
 
-    imagesOfTheParent = counting(level, node, tree);
-    
-    node = dividingNode(node);  
-
-    let imageVerifying = tree.getNode(level-1, node);
-    
-    setImage(img, level-1, node);
-    tree.setNode(img, level-1, node);
-
     if (imageVerifying != null && 
         new String(imageVerifying).valueOf() != new String(img).valueOf()) {
-        setImageAuxiliar(imagesOfTheParent, img, level-1, node, tree, imageVerifying);
+        setImageAuxiliar(imagesOfTheParent, img, level, node, tree, imageVerifying);
     }
 }
 
@@ -187,15 +187,31 @@ function shareContent(tree) {
     return content;
 }
 
+function getValue(){
+    var value= $.ajax({ 
+       url: './assets/js/content.json', 
+       async: false
+    }).responseText;
+    return value;
+ }
+
 $(document).ready(function () {
+
     var tree = new BinaryTree();
-    startBracket(tree);
+
+    startBracket(tree, content);
+    
+    //retriveDataFromJson(tree, startBracket);
 
     verifyingTheQueryString(tree);
 
     $("#btn-modal-video").click(function() {
         $("#modal1").modal(); 
     });
+
+    $("#btn-modal-regras").click(function () {
+        $("#modal-regras").modal();
+    })
 
     $(".games").click(function() { 
         makeWinnerChange(this, tree);
@@ -208,6 +224,11 @@ $(document).ready(function () {
                             + decodeURIComponent($.param(content[1])) + "&"
                             + decodeURIComponent($.param(content[2])) + "&"
                             + decodeURIComponent($.param(content[3]));
-       window.open(window.location.href + "?r=" + recursiveDecoded);
+        var log = window.location;
+
+        window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=bracketChallenge&caption=' +'&content='
+            + encodeURIComponent(window.location + "?r=" + recursiveDecoded) +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+
+        window.location.assign(log);
     });
 });

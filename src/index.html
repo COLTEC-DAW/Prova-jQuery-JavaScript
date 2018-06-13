@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/build/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="./assets/build/css/style.css"  media="screen,projection"/>
 
     <!-- Import custom css -->
     <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+        
 
     <div class="content">
 
@@ -28,11 +30,35 @@
 
             <div class="header">
                 <h3 class="white-text">Os melhores games de futebol™ Bracket Challenge</h3>
-                <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=157&height=28&appId" width="157" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
-                <a id="btn-modal-video" class="waves-effect waves-light btn modal-trigger">Vídeo do vencedor</a>
+                <div class="row">
+                    <a id="btn-modal-video" href="#modal1" class="col s2 waves-effect waves-light btn modal-trigger">Vídeo do vencedor</a>
+                    <div class="col s2 jogo">
+                        <div class="games">
+                            <div class="image-top">
+                                <img id="level:0-node:0">
+                            </div>
+                        </div>            
+                    </div>
+                    <div class="col s2 offset-s6">
+                        <a id="btn-modal-regras" href="#modal-regras" class="waves-effect waves-light btn modal-trigger">Regras</a>
+                    </div> 
+                </div>
             </div>
 
         </header>
+        <div id="modal-regras" class="modal">
+            <div class="modal-content">
+                <h4>Regras</h4>
+                <p>
+                    Já viu alguns brackets por aí e gostou?! Vejaa mais um e compartilhe com seus amigos. Logo após terminar o Bracket tem o vídeo do respectivo ganhador que você poderá ver. Se gostou do bracket compartilhe-o.
+                </p>
+                </br>
+                
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+        </div>
 
         <!--********* Games competidores ************* -->
         <div id="modal1" class="modal">
@@ -45,6 +71,7 @@
             </div>
             <div class="modal-footer">
                 <a href="#!" id="btn-share" class=" modal-action modal-close waves-effect waves-green btn-flat">Compartilhar o Bracket</a>
+                <a class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
             </div>
         </div>
 
@@ -337,8 +364,9 @@
 
 
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>  
+    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="assets/js/content.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 </html>
