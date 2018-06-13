@@ -4,21 +4,26 @@ $('.disputa').find('.item').each(function () {
         atual.parent().find('.item').removeClass('.active')
         atual.addClass('.active')
         updateNext(atual)
-        atual.animate({opacity: 0.2}, 600, 'linear')
-        atual.animate({opacity: 1}, 600, 'linear');
+        animation(atual)
     })
 })
 
 function updateNext(atual) {
     var grand = atual.parent().parent()
-    grand.find('.divisor').css('border-left-color', '#32CD32')
     var id = atual.parent().attr('next')
     var proximo = $('#'+id)
+    grand.find('.divisor').css('border-left-color', '#32CD32')
     proximo.css('visibility', 'visible')
     proximo.html(atual.html())
+    animation(proximo)
     if(proximo.hasClass('.active')) {
         updateNext(proximo)
     }
+}
+
+function animation(atual) {
+    atual.animate({opacity: 0.3}, 600, 'linear')
+    atual.animate({opacity: 1}, 600, 'linear')
 }
 
 $('#resultado').click(function(){
