@@ -53,35 +53,43 @@ body{
 
 .times-oitavas{
     margin: 3.5% auto 0;
-    width:80%;
-    height:11.5%;
+    width: 60%;
     border-style: solid;
     border-color: black;
+    height: 12%;
 }
 
 .times-quartas{
     margin: 30% auto 0;
-    width:80%;
-    height:11.5%;
+    width: 60%;
     border-style: solid;
     border-color: black;
+    height: 14%;
 }
 
 .times-semi{
     margin: 160% auto 0;
-    width:100%;
-    height:11.5%;
+    width:100%;    
     border-style: solid;
     border-color: black;
+    height: 15%;
 }
 
 .times-final{
-    margin: 280% auto 0;
-    width:100%;
-    height:11.5%;
+    margin: 200% auto 0;
+    width:120%;
     border-style: solid;
     border-color: black;
+    height: 20%;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 3%;
+    }
+}
+
 
 #quartas-container-2{
 
@@ -105,6 +113,7 @@ body{
 
 #final-1{
     margin-top: 310%;
+    
 }
 
 #final-2{
@@ -118,83 +127,83 @@ body{
 /* Times de Oitava: Escudos */
 
 #oitava-1{
-    background-image: url("times-escudos/180px-Escudo_do_Galo_Atual.jpg");
+    background-image: url("times-escudos/SaoPaulo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
    
 }
 #oitava-2{
-    background-image: url("times-escudos/bahia-logo.jpg");
+    background-image: url("times-escudos/Vasco.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-3{
-    background-image: url("times-escudos/botafogo-escudo.jpg");
+    background-image: url("times-escudos/Atletico.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-4{
-    background-image: url("times-escudos/Ceara-logo.jpg");
+    background-image: url("times-escudos/Bahia.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-5{
-    background-image: url("times-escudos/cruzeiro1-logo.png");
+    background-image: url("times-escudos/Inter.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-6{
-    background-image: url("times-escudos/escudo-do-Corinthians.png");
+    background-image: url("times-escudos/Fluminense.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-7{
-    background-image: url("times-escudos/flamengo-logo.png");
+    background-image: url("times-escudos/Sport.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-8{
-    background-image: url("times-escudos/fluminense-logo.png");
+    background-image: url("times-escudos/Corinthians.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-9{
-    background-image: url("times-escudos/fortaleza-escudo.jpg");
+    background-image: url("times-escudos/Palmeiras.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-10{
-    background-image: url("times-escudos/gremio-logo.jpg");
+    background-image: url("times-escudos/Botafogo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-11{
-    background-image: url("times-escudos/inter-escudo.jpg");
+    background-image: url("times-escudos/Gremio.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-12{
-    background-image: url("times-escudos/palmeiras-logo.jpg");
+    background-image: url("times-escudos/Cruzeiro.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-13{
-    background-image: url("times-escudos/santos-logo.jpg");
+    background-image: url("times-escudos/Santos.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-14{
-    background-image: url("times-escudos/sao-paulo-logo.png");
+    background-image: url("times-escudos/Coritiba.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-15{
-    background-image: url("times-escudos/sport-logo.jpg");
+    background-image: url("times-escudos/AtleticoPR.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #oitava-16{
-    background-image: url("times-escudos/vasco-logo.jpg");
+    background-image: url("times-escudos/Flamengo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
