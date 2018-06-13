@@ -1,8 +1,14 @@
+body{
+    background-image: url('imagens/background.png');
+    background-repeat: no-repeat;
+    background-size: 105vw;
+}
+
 /* Centralizar imagens nas colunas */
 img {
     display: block;
     margin: 0 auto;
-    width: 8vw;
+    width: 4vw;
 }
 
 /* jogo vencedor */
@@ -14,7 +20,7 @@ img {
 
 /*margin entre as imagens da coluna 1*/
 .col.col-sm-3.coluna1 > img{
-    margin-top: 1.3vw;
+    margin-top: 1.5vw;
 }
 
 
