@@ -4,12 +4,14 @@ function share(){
         obj[$(this).attr('id')] = $(this).html().replace(/\s/g, '');
     })
     $("#link").val(`${$(location).attr('href')}?bracket=${JSON.stringify(obj)}`)
-    $('#share').modal('show');    
+    $('#share').modal('show');
 }
 
 function copyToClipboard() {
-    var text = $("#link").val();
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+    var text = $("#link").select();
+    document.execCommand("copy");
+    alert('Link Copiado');
+    $('#share').modal('hide');
 }
 
 $.urlParam = function(name){
@@ -17,13 +19,18 @@ $.urlParam = function(name){
 	return results ? results[1] || 0 : 0;
 }
 if($.urlParam('bracket') != 0){
-    console.log(JSON.parse(decodeURIComponent($.urlParam('bracket'))))
-    $(".item").each(function(){
-        $(this).css('visibility', 'visible');
-    })
+    //console.log(JSON.parse(decodeURIComponent($.urlParam('bracket'))))
     const obj = JSON.parse(decodeURIComponent($.urlParam('bracket')))
     for(key in obj){
-        const btn =  $(`#${key}`)
+        const btn = $(`#${key}`)
         $(btn[0]).html(obj[key]);
     }
+    $(".item").each(function(){
+        var grand = $(this).parent().parent();
+        var son = $('#'+$(this).parent().attr('next'))
+        if(son.html() != "") {
+            $(this).css('visibility', 'visible');
+            grand.find('.divisor').css('border-left-color', '#32CD32');
+        }
+    })
 }
