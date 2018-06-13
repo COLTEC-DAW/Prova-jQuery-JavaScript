@@ -98,6 +98,8 @@ $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
+
+
 var array = [
     {
         "id": 0,

@@ -32,7 +32,7 @@ function render (){
             let card = document.createElement('DIV');
             card.setAttribute( 'class', 'el'+i);
             card.id='c'+i+'l'+j;
-            card.innerHTML = '<p class="z-depth-1 elementText">'+ bracket[j].nome +"</p>"
+            card.innerHTML = '<p class="z-depth-5 elementText">'+ bracket[j].nome +"</p>"
             element.appendChild(card);
         }
         bracket.splice(0, Math.pow(2, 5-i));
