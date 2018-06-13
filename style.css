@@ -3,6 +3,7 @@ body{
     background-image:  url("gramado/campo-de-futebol-wallpaper.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: 100%;
 }
 
 /* Modal CSS */
@@ -119,6 +120,9 @@ body{
     margin-top: 310%;
 }
 
+.selecionado {
+
+}
 
 /* Times de Oitava: Escudos */
 
