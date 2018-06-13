@@ -1,39 +1,33 @@
-$(".oitavas").find(".item").each(function(){
-    $(this).click(function(){
-        let node = $(".quartas").find(".item").get($(this).parents(".oitavas").index())
-        $(node).html($(this).html())
-        $(node).css('visibility', 'visible');
+$('.disputa').find('.item').each(function () {
+    let atual = $(this)
+    atual.click(function(){
+        atual.parent().find('.item').removeClass('.active')
+        atual.addClass('.active')
+        updateNext(atual)
     })
 })
 
-$(".quartas").find(".item").each(function(){
-    $(this).click(function(){
-        let node = $(".semi").find(".item").get($(this).parents(".quartas").index())
-        $(node).html($(this).html())
-        $(node).css('visibility', 'visible');
-    })
-})
-
-$(".semi").find(".item").each(function(){
-    $(this).click(function(){
-        let node = $(".final").find(".item").get($(this).parents(".semi").index())
-        $(node).html($(this).html())
-        $(node).css('visibility', 'visible');
-    })
-})
-
-$(".final").find(".item").each(function(){
-    $(this).click(function(){
-        let node = $(".resultado").find(".item").get($(this).parents(".final").index())
-        $(node).html($(this).html())
-        $(node).css('visibility', 'visible');
-    })
-})
-
-function update(node, value){
-    $(".eliminatorias").each(function(){
-        if($(this).html() == $(node).html() && $(this).html() != ""){
-            $(this).html(value);
-        }
-    })
+function updateNext(atual) {
+    var grand = atual.parent().parent()
+    grand.find('.divisor').css('border-left-color', '#32CD32')
+    var id = atual.parent().attr('next')
+    var proximo = $('#'+id)
+    proximo.css('visibility', 'visible')
+    proximo.html(atual.html())
+    if(proximo.hasClass('.active')) {
+        updateNext(proximo)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
