@@ -190,11 +190,7 @@
                     $(".pyro").attr("class", "pyro d-block"); // Dispara a animacao
                     
                     // Usuário é forçado à recarregar a página para jogar de novo
-                    $(".col-16-avos").css("pointer-events", "none");
-                    $(".col-oitavas").css("pointer-events", "none");
-                    $(".col-semis").css("pointer-events", "none");
-                    $(".col-quartas").css("pointer-events", "none");
-                    $(".col-final").css("pointer-events", "none");
+                    $(".card").css("pointer-events", "none");
                 }
 
                 // Volta pro jogo
