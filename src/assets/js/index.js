@@ -43,7 +43,7 @@ function verifyingTheQueryString(tree) {
 
 function startBracketShared(tree, queries) {
     var level = -1;
-    for (let index = 0; index < queries.length; index++) {
+    for (let index = 0; index < queries.length-1; index++) {
         let imageNode = queries[index].split("=");
         if (imageNode[0]==0) {
             level+=1;
@@ -55,6 +55,10 @@ function startBracketShared(tree, queries) {
             console.log(imageNode[1], level, imageNode[0]);
         }
     }
+    document.getElementById("nome").innerHTML = queries[queries.length-1];
+    $(".games").css("pointer-events", "none");
+    // document.getElementsByClassName("image-top").style['pointer-events'] = "none"
+    // document.getElementsByClassName("image-bottom").style['pointer-events'] = "none";
 }
 
 function startBracket(tree, json) {
@@ -209,7 +213,7 @@ $(document).ready(function () {
 
     verifyingTheQueryString(tree);
 
-    $(".btn-modal-video").click(function() {
+    $("#btn-modal-video").click(function() {
         $("#modal1").modal(); 
     });
 
@@ -222,12 +226,14 @@ $(document).ready(function () {
     });
 
     $("#btn-share").click(function() {
-        
+       var nome = $("#nomeUser").val();
+       console.log(nome);
        var content=shareContent(tree);
        var recursiveDecoded = decodeURIComponent($.param(content[0])) + "&"
                             + decodeURIComponent($.param(content[1])) + "&"
                             + decodeURIComponent($.param(content[2])) + "&"
-                            + decodeURIComponent($.param(content[3]));
+                            + decodeURIComponent($.param(content[3])) + "&"
+                            + decodeURIComponent(nome);
         var log = window.location;
 
         window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=bracketChallenge&caption=' +'&content='
