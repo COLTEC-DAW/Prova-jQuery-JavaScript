@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="css/stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Jua|Playfair+Display|Raleway+Dots" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Jua|Playfair+Display|Raleway+Dots|Sunflower:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Bracket Challenge: "Modãos" edition</title>
     </head>
@@ -16,7 +16,7 @@
             <h1 class="col-md-5 col-lg-5 d-none d-md-block navbar-brand" id="title"  >Bracket Challenge: "Modãos" edition</h1>
 
             <!-- MODAL  -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-primary instructions" data-toggle="modal" data-target="#myModal">
               Instructions
             </button>
             <div id="myModal" class="modal" tabindex="-1" role="dialog">
@@ -29,7 +29,9 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                        <p>Make a few hard choices and pick the best song in the masterpiece selection below.</p>
+                        <p>1 - Make a few hard choices and pick the best song in the masterpiece selection below.</p>
+                        <p>2 - Put your name so you can claime the bracket.</p>
+                        <p>3 - You can share with your friends! </p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it</button>
@@ -59,7 +61,8 @@
 
         </nav>
         <div id="canvas" class="container-fluid">
-            <div class="row">
+            <h1 id="rodada" class="text-center">Oitavas de Final - Duelo 1/8</h1>
+            <div id="combate" class="row">
                 <div id="fc1" class="fullCard offset-lg-1 col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(0)">
                     <div id="card1" class="card">
                         <img class="card-img-top" id="img1" src="">
@@ -68,6 +71,10 @@
                             <p id="text1" class="d-none d-md-block card-text hide-on-small-only"></p>
                         </div>
                     </div>
+                </div>
+
+                <div class="justify-content-center media">
+                    <img class="align-self-center d-none d-lg-block hide-on-small-only" src="assets/imagem/xcombat.png">
                 </div>
 
                 <div id="fc2" class="fullCard col-sm-12 col-md-6 col-lg-5" onclick="buttonClicked(1)">
@@ -81,9 +88,15 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
-            <p>by Rita</p>
-        </div>
+        <footer>
+            <p class="text-center"><strong>Developed By: 
+                <a href="https://github.com/haasilva">Henrique</a> and 
+                <a href="https://github.com/RitaRez">Rita</a>
+            </strong></p>
+            
+            <p class="text-center">Should we have anything useful here?</p>
+            <p class="text-center">E aí jovens?</p>
+        </footer>
 
         <script src="assets/soundmanager2-jsmin.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

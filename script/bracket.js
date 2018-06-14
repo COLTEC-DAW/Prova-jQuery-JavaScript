@@ -32,7 +32,7 @@ function render (){
             let card = document.createElement('DIV');
             card.setAttribute( 'class', 'el'+i);
             card.id='c'+i+'l'+j;
-            card.innerHTML = '<p class="elementText">'+ bracket[j].nome +"</p>"
+            card.innerHTML = '<p class="z-depth-5 elementText">'+ bracket[j].nome +"</p>"
             element.appendChild(card);
         }
         bracket.splice(0, Math.pow(2, 5-i));
@@ -118,50 +118,50 @@ var array = [
     },
     {
         "id": 9,
-        "nome": "Fio de Cabelo",
-        "audio": "assets/audio/fioDeCabelo.mp3",
-        "imagem": "assets/imagem/fioDeCabelo.jpg",
-        "texto": "E hoje o que encontrei me deixou mais triste um pedacinho dela que existe um fio de cabelo no meu paletó."
+        "nome": "Arapuca",
+        "audio": "assets/audio/arapuca.mp3",
+        "imagem": "assets/imagem/arapuca.jpg",
+        "texto": "Armei uma arapuca na beira da estrada, Pra pegar moça bonita e também mulher casada"
     },
     {
         "id": 10,
         "nome": "Ipê Florido",
         "audio": "assets/audio/ipeFlorido.mp3",
         "imagem": "assets/imagem/ipeFlorido.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Meu ipê florido junto à minha cela, Hoje tem altura de minha janela"
     },
     {
         "id": 11,
         "nome": "O Rei do Gado",
         "audio": "assets/audio/reiDoGado.mp3",
         "imagem": "assets/imagem/reiDoGado.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Sou desse chão, Onde o rei é peão, Com o laço na mão"
     },
     {
         "id": 12,
-        "nome": "Majestade o Sabia",
+        "nome": "Majestade, o Sabia",
         "audio": "assets/audio/majestadeOSabia.mp3",
         "imagem": "assets/imagem/majestadeOSabia.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Tô indo agora prum lugar todinho meu Quero uma rede preguiçosa pra deitar, Em minha volta sinfonia de pardais, Cantando para a majestade, o sabiá, A majestade, o sabiá"
     },
     {
         "id": 13,
         "nome": "É o Amor",
         "audio": "assets/audio/eOAmor.mp3",
         "imagem": "assets/imagem/eOAmor.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "É o amooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooor"
     },
     {
         "id": 14,
         "nome": "Fuscão Preto",
         "audio": "assets/audio/fuscaoPreto.mp3",
         "imagem": "assets/imagem/fuscaoPreto.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Fuscão preto com o seu ronco maldito, Meu castelo tão bonito, Você fez desmoronar..."
     },
     {
         "id": 15,
         "nome": "Chalana",
         "audio": "assets/audio/chalana.mp3",
         "imagem": "assets/imagem/chalana.jpg",
-        "texto": "E nessa loucura de dizer que não te quero vou negando as aparências e desfarçando as evidências."
+        "texto": "Oh! Chalana sem querer, Tu aumentas minha dor, Nessas águas tão serenas Vai levando meu amor"
     }]

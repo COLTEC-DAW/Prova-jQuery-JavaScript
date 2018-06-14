@@ -1,18 +1,60 @@
-#logo{
-    padding: 2px !important;
-    margin-top: 0px;
+body{
+    font-family: 'Sunflower';
+    background-color: blanchedalmond;
+    height: 100%;
 }
+a{
+    color: inherit;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+#logo{
+    margin-top: 1.5px;
+    height: 100px;
+    width: auto;
+}
+
+.instructions{
+    background-color: chocolate;
+    border-color: chocolate;
+}
+
+#nav{
+    background-color: peru !important;
+}
+
+footer{
+    background-color: peru;
+    bottom: 0;
+    overflow: hidden;
+
+}
+
+#xcombat{
+    width: 100px;
+    height: auto;
+}
+
+#rodada{
+    margin-top: 3%; 
+    color: rgb(69, 40, 14);
+}
+
 #title{
     font-style: italic;
     font-size: 1.3em;
     font-family: 'Inconsolata', monospace;
     color: rgb(69, 40, 14);
-    border:  color: rgb(69, 40, 14);
-    margin-top: 2%;
 }
 #card1, #card2 {
     margin-bottom: 10%;
     padding: 0px;
+    background-color: peru;
 }
 #fc1, #fc2{
     padding-left: 4%;
@@ -35,3 +77,8 @@
 .fullCard{
     padding: 0px;
 }
+
+#combate{
+    margin-top: 3%;
+}
+
