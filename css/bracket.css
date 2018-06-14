@@ -16,6 +16,10 @@ body{
     background-size: cover;
 }
 
+p{
+    width: 160px;
+}
+
 .elementText{
     background-color: bisque;
 }
@@ -64,7 +68,7 @@ body{
     }
     .el2{
         height: 4vh;
-        margin-top: 5.8vh;
+        margin-top: 7.0vh;
     }
     .el3{
         height: 4vh;
@@ -95,13 +99,14 @@ body{
 
 @media only screen and (min-width: 600px){
 
+    
     .elementText{
         text-align: center;
         font-size: 1.65vw;
     }
     .el1{
-        height: 4vh;
-        margin-top: 1vh;
+        height: 4%;
+        margin-top: 10%;
     }
     .el2{
         height: 4vh;
@@ -136,43 +141,46 @@ body{
 
 @media only screen and (min-width: 900px){
 
+    p{
+        width: 140px;
+    }
     .elementText{
         text-align: center;
         padding:0% 4% 0% 4%;
         font-size: 1.3vw;
     }
     .el1{
-        height: 4vh;
-        margin-top: 1vh;
+        height: 4%;
+        margin-top: 50%;
     }
     .el2{
-        height: 4vh;
-        margin-top: 8.3vh;
+        height: 8%;
+        margin-top: 122%;
     }
     .el3{
-        height: 4vh;
-        margin-top: 21vh;
+        height: 16%;
+        margin-top: 270%;
     }
     .el4{
-        height: 4vh;
-        margin-top: 46.5vh;
+        height: 32%;
+        margin-top: 560%;
     }
     .el5{
-        height: 4vh;
-        margin-top: 44vh;
+        height: 64%;
+        margin-top: 560%;
     }
 
     #c1l0{
         margin-top: 0vh !important;
     }
     #c2l0{
-        margin-top: 5vh !important;
+        margin-top: 45% !important;
     }
     #c3l0{
-        margin-top: 10vh !important;
+        margin-top: 115% !important;
     }
     #c4l0{
-        margin-top: 20vh !important;
+        margin-top: 250% !important;
     }
 }
 
@@ -184,12 +192,12 @@ body{
         font-size: 1.1vw;
     }
     .el1{
-        height: 4vh;
-        margin-top: 1vh;
+        height: 4%;
+        margin-top: 0.5%;
     }
     .el2{
-        height: 4vh;
-        margin-top: 8vh;
+        height: 4%;
+        margin-top: 8;
     }
     .el3{
         height: 4vh;

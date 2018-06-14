@@ -1,11 +1,13 @@
 var arrayAux = [];
 var arrayE = [];
 var i = 0;
+var count = 0;
 var m = []
 
 $(document).ready(function(){
     let nav = $('#nav').css('height');
     $("#canvas").css('margin-top', nav/2);
+    document.getElementById('rodada').innerHTML = "Oitavas de final - Duelo " + (count + 1) + "/8";
     round();
 });
 
@@ -21,7 +23,10 @@ function buttonClicked(btn){
 
     arrayAux.push(array[i+btn].id);
     arrayE.push(array[i+btn]);
+    
     console.log(window.location.href);
+    
+    
     if (array.length == 2) {
         let address = window.location.href.split('').splice(0, window.location.href.length-10).join('')+'template/bracket.html?bracket='+arrayAux.join('-')
         address = address + '&name=' + document.getElementById('nome').value;
@@ -30,15 +35,28 @@ function buttonClicked(btn){
 
     }
     else{
-        if(i < array.length - 2)
+        if(i < array.length - 2){
             i = i+2;
+            count++;
+        }   
         else{
             i = 0;
+            count = 0;
             array = arrayE;
             arrayE = [];
         }
         round()
     }
+    if(arrayAux.length < 8)
+        document.getElementById('rodada').innerHTML = "Oitavas de final - Duelo " + (count + 1) + "/8";
+    if(arrayAux.length > 7 && arrayAux.length < 12)
+        document.getElementById('rodada').innerHTML = "Quartas de final - Duelo " + (count + 1) + "/4";
+    else if(arrayAux.length > 11 && arrayAux.length < 14)
+        document.getElementById('rodada').innerHTML = "Semi-final - Duelo " + (count + 1) + "/2";
+    else if(arrayAux.length > 13)
+        document.getElementById('rodada').innerHTML = "A grande final"
+
+    
 }
 function imageSetup(obj1, obj2){
     $('#img1').attr('src', obj1.imagem);
