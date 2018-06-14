@@ -91,6 +91,10 @@ function makeWinnerChange(games, tree) {
     img = img.split("/");
     img = img[img.length-1];
 
+    if (img == "") {
+        return;
+    }
+
     imagesOfTheParent = counting(level, node, tree);
     
     node = dividingNode(node);  
