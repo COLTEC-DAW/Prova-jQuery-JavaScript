@@ -171,7 +171,7 @@ p{
     }
 
     #c1l0{
-        margin-top: 0vh !important;
+        margin-top: 0% !important;
     }
     #c2l0{
         margin-top: 45% !important;
@@ -185,6 +185,54 @@ p{
 }
 
 @media only screen and (min-width: 1200px) {
+    p{
+        width: 205px;
+    }
+
+    .elementText{
+        text-align: center;
+        padding: 0% 10% 0% 10%;
+        font-size: 1.1vw;
+    }
+    .el1{
+        height: 0%;
+        margin-top: 0.5%;
+    }
+    .el2{
+        height: 4%;
+        margin-top: 44%;
+    }
+    .el3{
+        height: 8%;
+        margin-top: 112%;
+    }
+    .el4{
+        height: 16%;
+        margin-top: 250%;
+    }
+    .el5{
+        height:32%;
+        margin-top: 260%;
+    }
+
+    #c1l0{
+        margin-top: 0% !important;
+    }
+    #c2l0{
+        margin-top: 25% !important;
+    }
+    #c3l0{
+        margin-top: 60% !important;
+    }
+    #c4l0{
+        margin-top: 125% !important;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    p{
+        width: 205px;
+    }
 
     .elementText{
         text-align: center;
@@ -197,31 +245,31 @@ p{
     }
     .el2{
         height: 4%;
-        margin-top: 8;
+        margin-top: 44%;
     }
     .el3{
-        height: 4vh;
-        margin-top: 21vh;
+        height: 8%;
+        margin-top: 112%;
     }
     .el4{
-        height: 4vh;
-        margin-top: 46.5vh;
+        height: 16%;
+        margin-top: 250%;
     }
     .el5{
-        height: 4vh;
-        margin-top: 44vh;
+        height:32%;
+        margin-top: 260%;
     }
 
     #c1l0{
-        margin-top: 0vh !important;
+        margin-top: 0% !important;
     }
     #c2l0{
-        margin-top: 5vh !important;
+        margin-top: 25% !important;
     }
     #c3l0{
-        margin-top: 10vh !important;
+        margin-top: 60% !important;
     }
     #c4l0{
-        margin-top: 20vh !important;
+        margin-top: 125% !important;
     }
 }
