@@ -31,39 +31,35 @@
             <div class="header">
                 <h3 class="white-text">Os melhores games de futebol™ Bracket Challenge</h3>
                 <div class="row">
-                    <a id="btn-modal-video" href="#modal1" class="col s2 waves-effect waves-light btn modal-trigger">Vídeo do vencedor</a>
-                    <div class="col s2 jogo">
-                        <div class="games">
-                            <div class="image-top">
-                                <img id="level:0-node:0">
-                            </div>
-                        </div>            
-                    </div>
-                    <div class="col s2 offset-s6">
-                        <a id="btn-modal-regras" href="#modal-regras" class="waves-effect waves-light btn modal-trigger">Regras</a>
-                    </div> 
+                    <a id="btn-modal-video" href="#modal1" class="waves-effect waves-light btn modal-trigger">Vencedor</a>
+                    <a id="btn-modal-regras" href="#modal-regras" class="waves-effect waves-light btn modal-trigger">Regras</a>
+                </div> 
                 </div>
             </div>
 
         </header>
-        <div id="modal-regras" class="modal">
+
+
+        <!-- Modal para mostrar as regras -->
+        <div id="modal-regras" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4>Regras</h4>
-                <p>
-                    Já viu alguns brackets por aí e gostou?! Vejaa mais um e compartilhe com seus amigos. Logo após terminar o Bracket tem o vídeo do respectivo ganhador que você poderá ver. Se gostou do bracket compartilhe-o.
+                <p class="gray-text">
+                    Bem vindo ao bracket dos melhores jogos de futebol da história! Apenas selecione em cada card, qual dos jogos você acha melhor ou gostou mais de jogar, e no final, teremos o campeão dessa competição. Boa sorte! E não esqueça de compartilhar com os amigos :)
                 </p>
-                </br>
-                
+                </br>              
             </div>
             <div class="modal-footer">
                 <a class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
             </div>
         </div>
 
-        <!--********* Games competidores ************* -->
-        <div id="modal1" class="modal">
+
+        <!-- Modal para mostrar o vencedor -->
+        <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
-                <h4>Vencedor</h4>
+                <h4 class="center-align">Vencedor!</h4>
+                <img id="level:0-node:0" class="center-align" width="100%">
                 <p>
                     <div class="video-container">
                     <iframe width="560" height="315" id="video" src="" frameborder="0" allowfullscreen></iframe></div>
@@ -74,6 +70,8 @@
                 <a class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
             </div>
         </div>
+
+        <!--********* Games competidores ************* -->
 
 
         <div class="primeira-coluna">
@@ -343,10 +341,14 @@
 
         <div class="quarta-coluna">
 
-            <!-- Vencedores da semi final -->
+            <!-- Final -->
+
+            <span class="white-text h1">Final</span>
+            <hr>
+
             <div class="jogo">
                 <div class="games">
-                    <div class="image-top">
+                    <div class="image-top" id="btn-modal-video">
                         <img id="level:1-node:0">
                     </div>
                 </div>            

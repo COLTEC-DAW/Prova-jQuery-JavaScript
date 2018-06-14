@@ -77,7 +77,7 @@ function attrSrcVideo (tree, json) {
         }
     }  
     
-    $('#modal1').modal('show');
+    $('#modal1').modal();
 }    
 
 function makeWinnerChange(games, tree) {
@@ -205,7 +205,7 @@ $(document).ready(function () {
 
     verifyingTheQueryString(tree);
 
-    $("#btn-modal-video").click(function() {
+    $(".btn-modal-video").click(function() {
         $("#modal1").modal(); 
     });
 
