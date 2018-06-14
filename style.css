@@ -229,3 +229,28 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+.times-oitavas:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-semi:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-quartas:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-final:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+
+/*Animações*/
+
+@keyframes gira {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
