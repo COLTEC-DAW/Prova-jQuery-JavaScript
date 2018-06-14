@@ -4,7 +4,6 @@ var i = 0;
 var m = []
 
 $(document).ready(function(){
-
     let nav = $('#nav').css('height');
     $("#canvas").css('margin-top', nav/2);
     round();
@@ -19,6 +18,7 @@ function run (i){
 }
 
 function buttonClicked(btn){
+
     arrayAux.push(array[i+btn].id);
     arrayE.push(array[i+btn]);
     console.log(window.location.href);

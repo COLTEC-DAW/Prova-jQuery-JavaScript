@@ -18,9 +18,18 @@ body{
     background-color: peru !important;
 }
 
+#footer{
+    background-color: peru;
+}
+
 #xcombat{
     width: 100px;
     height: auto;
+}
+
+#position{
+    margin-top: 3%; 
+    color: rgb(69, 40, 14);
 }
 
 #title{

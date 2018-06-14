@@ -31,6 +31,12 @@ body{
     background-color: chocolate;
 }
 
+#home{
+    margin-top: 35px;
+    margin-right: 5px;
+    background-color: chocolate;
+}
+
 #title{
     font-size: 200%;
     text-align: center;
