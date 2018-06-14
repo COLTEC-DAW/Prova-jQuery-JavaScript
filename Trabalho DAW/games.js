@@ -56,7 +56,7 @@ function proxLinha(linha){
 const indefinido = "imagens/interrogacao.png";
 const win = "imagens/win.png";
 function clique(item){
-    if(item.src==indefinido){ //impedir continuar se foi clicado em algum não definido
+    if(item.src.match(indefinido)){ //impedir continuar se foi clicado em algum não definido
         return false;
     }
     
