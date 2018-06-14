@@ -1,0 +1,256 @@
+
+body{
+    background-image:  url("gramado/campo-de-futebol-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+    
+}
+
+/* Modal CSS */
+
+#champ-text{
+    color: red;
+    font-family: 'Monoton', cursive;
+}
+
+#boxes1 #champ {
+    background-image: default;
+    width:375px;
+    height:300px;
+}
+#boxes1 .window {
+    position: fixed;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+}
+
+
+#boxes .window {
+    position: fixed;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+}
+
+#boxes #dialog {
+    background: white;
+    width:375px;
+    height:300px;
+}
+
+.close {
+    display:block; 
+    text-align:right;
+}  
+/* FIM Modal CSS */
+
+
+#titulo-campeonato{
+    font-family: 'Monoton', cursive;
+    font-size: 300%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+#botao-regras{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 45.7% 3%;
+    cursor: pointer;
+}
+
+.times-oitavas{
+    margin: 3.5% auto 0;
+    width: 60%;
+    border-style: solid;
+    border-color: black;
+    height: 12%;
+}
+
+.times-quartas{
+    margin: 30% auto 0;
+    width: 60%;
+    border-style: solid;
+    border-color: black;
+    height: 14%;
+}
+
+.times-semi{
+    margin: 160% auto 0;
+    width:100%;    
+    border-style: solid;
+    border-color: black;
+    height: 15%;
+}
+
+.times-final{
+    margin: 200% auto 0;
+    width:100%;
+    border-style: solid;
+    border-color: black;
+    height: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 3%;
+    }
+}
+
+
+#quartas-container-2{
+
+    margin-top:50%; 
+}
+
+#quartas-container-4{
+
+    margin-top:50%; 
+}
+
+#semi-2{
+
+    margin-top: 250%;
+}
+
+#semi-4{
+
+    margin-top: 250%;
+}
+
+#final-1{
+    margin-top: 310%;
+    
+}
+
+#final-2{
+    margin-top: 310%;
+}
+
+#campeao{
+    display: none;
+
+}
+
+/* Times de Oitava: Escudos */
+
+#oitava-1{
+    background-image: url("times-escudos/SaoPaulo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+}
+#oitava-2{
+    background-image: url("times-escudos/Vasco.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-3{
+    background-image: url("times-escudos/Atletico.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-4{
+    background-image: url("times-escudos/Bahia.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-5{
+    background-image: url("times-escudos/Inter.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-6{
+    background-image: url("times-escudos/Fluminense.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-7{
+    background-image: url("times-escudos/Sport.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-8{
+    background-image: url("times-escudos/Corinthians.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-9{
+    background-image: url("times-escudos/Palmeiras.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-10{
+    background-image: url("times-escudos/Botafogo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-11{
+    background-image: url("times-escudos/Gremio.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-12{
+    background-image: url("times-escudos/Cruzeiro.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-13{
+    background-image: url("times-escudos/Santos.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-14{
+    background-image: url("times-escudos/Coritiba.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-15{
+    background-image: url("times-escudos/AtleticoPR.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#oitava-16{
+    background-image: url("times-escudos/Flamengo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.times-oitavas:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-semi:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-quartas:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+.times-final:active{
+    animation: 0.7s ease-out 0s 1 gira;
+}
+
+/*Animações*/
+
+@keyframes gira {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+

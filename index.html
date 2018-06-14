@@ -1,0 +1,479 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melhor Time Brasileiro 2018</title>
+    <link rel="shortcut icon" href="Favicon/ball-icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+</head>
+<body>
+
+    <div class="row">
+
+        <div id="titulo-campeonato" class="col-12 col-sm-12 col-md-12 col-lg-12">Melhor Time 2018</div>
+
+        <!--OITAVAS DE FINAL 1° CHAVE-->
+        
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                <div id="oitavas-container-1">
+                    <div class="times times-oitavas" id="oitava-1"></div>
+                    <div class="times times-oitavas" id="oitava-2"></div>
+                </div>
+                <div id="oitavas-container-2">
+                    <div class="times times-oitavas" id="oitava-3"></div>
+                    <div class="times times-oitavas" id="oitava-4"></div>
+                </div>
+                <div id="oitavas-container-3">
+                    <div class="times times-oitavas" id="oitava-5"></div>
+                    <div class="times times-oitavas" id="oitava-6"></div>
+                </div>
+                <div id="oitavas-container-4">
+                    <div class="times times-oitavas" id="oitava-7"></div>
+                    <div class="times times-oitavas" id="oitava-8"></div>
+                </div>
+            </div>
+        
+        <!--QUARTAS DE FINAL 1° CHAVE-->
+        
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                <div id="quartas-container-1">
+                        <div class="times times-quartas" id="quarta-1"></div>
+                        <div class="times times-quartas" id="quarta-2"></div>
+                </div>
+                <div id="quartas-container-2">
+                        <div class="times times-quartas" id="quarta-3"></div>
+                        <div class="times times-quartas" id="quarta-4"></div>
+                </div>
+                
+            </div>
+                
+        <!--SEMI-FINAL 1° CHAVE-->  
+        
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1" id="semi-container-1">
+                <div class="times times-semi" id="semi-1"></div>
+                <div class="times times-semi" id="semi-2"></div>
+            </div>
+        
+        <!--FINAL-->
+            
+           
+            
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="times-final" name="campeao" id="final-1" href="#champ"></div>
+            </div>
+    
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="times-final" name="campeao" id="final-2" href="#champ"></div>
+            </div>
+        
+
+         <!--SEMI-FINAL 2° CHAVE--> 
+        
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1" id="semi-container-2">
+                <div class="times times-semi" id="semi-3"></div>
+                <div class="times times-semi" id="semi-4"></div>
+            </div>
+    
+        <!--QUARTAS DE FINAL 2° CHAVE--> 
+        
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+            <div id="quartas-container-3">
+                <div class="times times-quartas" id="quarta-5"></div>
+                <div class="times times-quartas" id="quarta-6"></div>
+            </div>
+            <div id="quartas-container-4">
+                <div class="times times-quartas" id="quarta-7"></div>
+                <div class="times times-quartas" id="quarta-8"></div>
+            </div>
+        
+        </div>
+        
+        <!--OITAVAS DE FINAL 2° CHAVE--> 
+                
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+            <div id="oitavas-container-5">
+                <div class="times times-oitavas" id="oitava-9"></div>
+                <div class="times times-oitavas" id="oitava-10"></div>
+            </div>
+            <div id="oitavas-container-6">
+                <div class="times times-oitavas" id="oitava-11"></div>
+                <div class="times times-oitavas" id="oitava-12"></div>
+            </div>
+            <div id="oitavas-container-7">
+                <div class="times times-oitavas" id="oitava-13"></div>
+                <div class="times times-oitavas" id="oitava-14"></div>
+            </div>
+            <div id="oitavas-container-8">
+                <div class="times times-oitavas" id="oitava-15"></div>
+                <div class="times times-oitavas" id="oitava-16"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <button id="botao-regras" name="modal" href="#dialog">Regras</button>
+    </div>
+
+<!--Campeao-->
+
+<div id="boxes1">
+
+    
+    <div id="champ" class="window">
+    <h3 class="text-center" id="champ-text">CAMPEÃO!!!</h3>
+    
+    <a href="#" class="close">Sair</a> 
+    </div>
+
+</div>
+
+<!--Modal-->
+
+    <div id="boxes">
+
+
+        <div id="dialog" class="window">
+        <b>Regras</b>
+        
+        <a href="#" class="close">Sair</a>
+        <br/>
+        <br>Bem vindo ao campeonato de melhor time do Brasil.
+        Essa seleção de times é composta pelos 16 times que tiveram
+        a melhor classificação no Brasileirão 2017.
+        <br> O bracket nas oitavas de final funciona a partir da escolha 
+        entre dois times e assim por diante.  
+        </div>   
+        
+    </div>
+
+<!--Scripts-->
+<script src="jquery-3.3.1.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+    
+
+//DECISÃO DAS OITAVAS DE FINAL
+
+
+ 
+    $("#oitavas-container-1 div:first").click(function(event){
+
+    
+        $("#quarta-1").css({"background-image": "url('times-escudos/SaoPaulo.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+
+     });
+
+    $("#oitava-2").click(function(event){
+
+        $("#quarta-1").css({"background-image": "url('times-escudos/Vasco.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-3").click(function(event){
+
+        $("#quarta-2").css({"background-image": "url('times-escudos/Atletico.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-4").click(function(event){
+
+        $("#quarta-2").css({"background-image": "url('times-escudos/Bahia.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+
+    $("#oitava-5").click(function(event){
+
+        $("#quarta-3").css({"background-image": "url('times-escudos/Inter.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-6").click(function(event){
+
+        $("#quarta-3").css({"background-image": "url('times-escudos/Fluminense.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+    
+    $("#oitava-7").click(function(event){
+
+        $("#quarta-4").css({"background-image": "url('times-escudos/Sport.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-8").click(function(event){
+
+        $("#quarta-4").css({"background-image": "url('times-escudos/Corinthians.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+
+    $("#oitava-9").click(function(event){
+
+        $("#quarta-5").css({"background-image": "url('times-escudos/Palmeiras.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-10").click(function(event){
+
+        $("#quarta-5").css({"background-image": "url('times-escudos/Botafogo.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-11").click(function(event){
+
+        $("#quarta-6").css({"background-image": "url('times-escudos/Gremio.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-12").click(function(event){
+
+        $("#quarta-6").css({"background-image": "url('times-escudos/Cruzeiro.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-13").click(function(event){
+
+        $("#quarta-7").css({"background-image": "url('times-escudos/Santos.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-14").click(function(event){
+
+        $("#quarta-7").css({"background-image": "url('times-escudos/Coritiba.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-15").click(function(event){
+
+        $("#quarta-8").css({"background-image": "url('times-escudos/AtleticoPR.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#oitava-16").click(function(event){
+
+        $("#quarta-8").css({"background-image": "url('times-escudos/Flamengo.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+
+//DECISÃO DAS QUARTAS DE FINAL
+
+    $("#quarta-1").click(function(event){
+
+        $("#semi-1").css({"background-image": $("#quarta-1").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-2").click(function(event){
+
+       $("#semi-1").css({"background-image": $("#quarta-2").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-3").click(function(event){
+
+        $("#semi-2").css({"background-image": $("#quarta-3").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-4").click(function(event){
+
+       $("#semi-2").css({"background-image": $("#quarta-4").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+
+    $("#quarta-5").click(function(event){
+
+        $("#semi-3").css({"background-image": $("#quarta-5").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-6").click(function(event){
+
+        $("#semi-3").css({"background-image": $("#quarta-6").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-7").click(function(event){
+
+        $("#semi-4").css({"background-image": $("#quarta-7").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#quarta-8").click(function(event){
+
+        $("#semi-4").css({"background-image": $("#quarta-8").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+//DECISÃO DAS SEMI-FINAIS
+
+    $("#semi-1").click(function(event){
+
+        $("#final-1").css({"background-image": $("#semi-1").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#semi-2").click(function(event){
+
+        $("#final-1").css({"background-image": $("#semi-2").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#semi-3").click(function(event){
+
+        $("#final-2").css({"background-image": $("#semi-3").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+    $("#semi-4").click(function(event){
+
+        $("#final-2").css({"background-image": $("#semi-4").css("background-image"), "background-size": "100% 100%", "background-repeat": "no-repeat"});
+
+    });
+
+
+//Modal//
+
+
+$('button[name=modal]').click(function(e) {
+
+e.preventDefault();
+
+
+var id = $(this).attr('href');
+
+
+var winH = $(window).height();
+var winW = $(window).width();
+
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+$(id).fadeIn(2000);
+});
+
+
+$('.window .close').click(function (e) {
+
+e.preventDefault();
+$('.window').hide();
+});
+
+
+});
+
+//Campeão//
+
+//Final -1//
+
+$("#final-1[name=campeao]").click(function(event) {
+
+
+var id = $(this).attr('href');
+
+
+var winH = $(window).height();
+var winW = $(window).width();
+var background= "#champ";
+
+$(background).css({"background-image": $("#final-1").css("background-image"),"background-size": "100% 100%", "background-repeat": "no-repeat"})
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+$(id).fadeIn(1000);
+});
+
+
+$('.window .close').click(function (e) {
+
+e.preventDefault();
+$('.window').hide();
+});
+
+//Final -2//
+
+$("#final-2[name=campeao]").click(function(e) {
+
+e.preventDefault();
+
+
+var id = $(this).attr('href');
+
+
+var winH = $(window).height();
+var winW = $(window).width();
+var background= "#champ";
+
+$(background).css({"background-image": $("#final-2").css("background-image"),"background-size": "100% 100%", "background-repeat": "no-repeat"})
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+$(id).fadeIn(1000);
+});
+
+
+$('.window .close').click(function (e) {
+
+e.preventDefault();
+$('.window').hide();
+});
+
+//Campo de Nome//
+
+</script>
+
+<form id="peganome" action="/action_page.php">
+  Nome: <input type="text" name="fname" value="Gustavo"><br>
+</form> 
+
+<button id="trocanome" onclick="mostranome()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function mostranome() {
+    var x = document.getElementById("peganome");
+    var nomep = "Desenvolvido por:";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        nomep += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = nomep;
+    
+    $("trocanome").click(function(){
+        $("peganome").hide();
+        $("trocanome").hide();
+        $("fname").hide();
+    });
+}
+
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
