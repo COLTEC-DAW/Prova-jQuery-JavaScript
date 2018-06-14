@@ -9,6 +9,9 @@ g semi
 h quartas
 i oitavas
 */
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
 function proxColuna(coluna){
     switch (coluna) {
         case 'a':
@@ -53,12 +56,26 @@ function proxLinha(linha){
     return parseInt( ( parseFloat(linha) + 1.0 ) /2 );
 }
 
+function animação(item){
+    var id = '#' + proxColuna(item.id[0]) + proxLinha(item.id[1]);
+    $(id).toggleClass("aumentado");
+    sleep(500).then(() => {
+        $(id).toggleClass("naumentado");
+        sleep(2000).then(() => {
+            $(id).removeClass("aumentado");
+            $(id).removeClass("naumentado");
+        })
+    })
+}
+
 const indefinido = "imagens/interrogacao.png";
 const win = "imagens/win.png";
 function clique(item){
     if(item.src.match(indefinido)){ //impedir continuar se foi clicado em algum não definido
         return false;
     }
+
+    animação(item);
     
     var coluna = item.id[0];
     var linha = item.id[1];

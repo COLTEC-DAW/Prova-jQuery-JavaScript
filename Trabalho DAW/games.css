@@ -16,6 +16,21 @@ img:hover{
     transform: scale(1.2);
 }
 
+.aumentado{
+    transform: scale(2);
+    transition: 0.5s;
+}
+.aumentado:hover{
+    transform: scale(2);
+}
+.naumentado{
+    transform: scale(1);
+    transition: 2s;
+}
+.naumentado:hover{
+    transform: scale(1);
+}
+
 /* Ajustar o titulo */
 p{
     text-align: center;
