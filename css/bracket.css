@@ -1,0 +1,275 @@
+body{
+    font-family: 'Sunflower';
+    background-color: blanchedalmond;
+}
+
+#bg { 
+    /* The image used */
+    background-image: url("../assets/imagem/wallpaper.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p{
+    width: 160px;
+}
+
+.elementText{
+    background-color: bisque;
+}
+
+#tumblr{
+    margin-top: 35px;
+    margin-left: 5px;
+    background-color: chocolate;
+}
+
+#twitter{
+    margin-top: 35px;
+    background-color: chocolate;
+}
+
+#home{
+    margin-top: 35px;
+    margin-right: 5px;
+    background-color: chocolate;
+}
+
+#title{
+    font-size: 200%;
+    text-align: center;
+}
+
+#logo{
+    margin-top: 1.5px;
+    height: 100px;
+    width: auto;
+}
+
+#topo{
+    background-color: peru;
+}
+
+@media only screen and (max-width: 599px) {
+
+    .elementText{
+        text-align: center;
+        font-size: 1.4vw;
+    }
+    .el1{
+        height: 4vh;
+        margin-top: 1vh;
+    }
+    .el2{
+        height: 4vh;
+        margin-top: 7.0vh;
+    }
+    .el3{
+        height: 4vh;
+        margin-top: 15.5vh;
+    }
+    .el4{
+        height: 4vh;
+        margin-top: 32.5vh;
+    }
+    .el5{
+        height: 4vh;
+        margin-top: 39vh;
+    }
+
+    #c1l0{
+        margin-top: 0vh !important;
+    }
+    #c2l0{
+        margin-top: 4vh !important;
+    }
+    #c3l0{
+        margin-top: 9vh !important;
+    }
+    #c4l0{
+        margin-top: 20vh !important;
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+    
+    .elementText{
+        text-align: center;
+        font-size: 1.65vw;
+    }
+    .el1{
+        height: 4%;
+        margin-top: 10%;
+    }
+    .el2{
+        height: 4vh;
+        margin-top: 7vh;
+    }
+    .el3{
+        height: 4vh;
+        margin-top: 18vh;
+    }
+    .el4{
+        height: 4vh;
+        margin-top: 43.5vh;
+    }
+    .el5{
+        height: 4vh;
+        margin-top: 44vh;
+    }
+
+    #c1l0{
+        margin-top: 0vh !important;
+    }
+    #c2l0{
+        margin-top: 5vh !important;
+    }
+    #c3l0{
+        margin-top: 10vh !important;
+    }
+    #c4l0{
+        margin-top: 20vh !important;
+    }
+}
+
+@media only screen and (min-width: 900px){
+
+    p{
+        width: 140px;
+    }
+    .elementText{
+        text-align: center;
+        padding:0% 4% 0% 4%;
+        font-size: 1.3vw;
+    }
+    .el1{
+        height: 4%;
+        margin-top: 50%;
+    }
+    .el2{
+        height: 8%;
+        margin-top: 122%;
+    }
+    .el3{
+        height: 16%;
+        margin-top: 270%;
+    }
+    .el4{
+        height: 32%;
+        margin-top: 560%;
+    }
+    .el5{
+        height: 64%;
+        margin-top: 560%;
+    }
+
+    #c1l0{
+        margin-top: 0% !important;
+    }
+    #c2l0{
+        margin-top: 45% !important;
+    }
+    #c3l0{
+        margin-top: 115% !important;
+    }
+    #c4l0{
+        margin-top: 250% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px ) and (max-width: 1499px) {
+    p{
+        width: 160px;
+    }
+
+    .elementText{
+        text-align: center;
+        padding: 0% 10% 0% 10%;
+        font-size: 1.1vw;
+    }
+    .el1{
+        height: 0%;
+        margin-top: 10%;
+    }
+    .el2{
+        height: 4%;
+        margin-top: 43%;
+    }
+    .el3{
+        height: 8%;
+        margin-top: 110%;
+    }
+    .el4{
+        height: 16%;
+        margin-top: 240%;
+    }
+    .el5{
+        height:32%;
+        margin-top: 260%;
+    }
+
+    #c1l0{
+        margin-top: 0% !important;
+    }
+    #c2l0{
+        margin-top: 25% !important;
+    }
+    #c3l0{
+        margin-top: 60% !important;
+    }
+    #c4l0{
+        margin-top: 120% !important;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    p{
+        width: 205px;
+    }
+
+    .elementText{
+        text-align: center;
+        padding: 0% 10% 0% 10%;
+        font-size: 1.1vw;
+    }
+    .el1{
+        height: 4%;
+        margin-top: 0.5%;
+    }
+    .el2{
+        height: 4%;
+        margin-top: 44%;
+    }
+    .el3{
+        height: 8%;
+        margin-top: 112%;
+    }
+    .el4{
+        height: 16%;
+        margin-top: 250%;
+    }
+    .el5{
+        height:32%;
+        margin-top: 260%;
+    }
+
+    #c1l0{
+        margin-top: 0% !important;
+    }
+    #c2l0{
+        margin-top: 25% !important;
+    }
+    #c3l0{
+        margin-top: 60% !important;
+    }
+    #c4l0{
+        margin-top: 125% !important;
+    }
+}

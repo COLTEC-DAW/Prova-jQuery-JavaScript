@@ -1,0 +1,84 @@
+body{
+    font-family: 'Sunflower';
+    background-color: blanchedalmond;
+    height: 100%;
+}
+a{
+    color: inherit;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+#logo{
+    margin-top: 1.5px;
+    height: 100px;
+    width: auto;
+}
+
+.instructions{
+    background-color: chocolate;
+    border-color: chocolate;
+}
+
+#nav{
+    background-color: peru !important;
+}
+
+footer{
+    background-color: peru;
+    bottom: 0;
+    overflow: hidden;
+
+}
+
+#xcombat{
+    width: 100px;
+    height: auto;
+}
+
+#rodada{
+    margin-top: 3%; 
+    color: rgb(69, 40, 14);
+}
+
+#title{
+    font-style: italic;
+    font-size: 1.3em;
+    font-family: 'Inconsolata', monospace;
+    color: rgb(69, 40, 14);
+}
+#card1, #card2 {
+    margin-bottom: 10%;
+    padding: 0px;
+    background-color: peru;
+}
+#fc1, #fc2{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+#g1, #nome{
+    height: 40px;
+}
+#modal{
+    font-size: 0.65em;
+}
+.cardTitle{
+    background-color: rgb(246, 250, 230) !important;
+    color: rgb(69, 40, 14);
+}
+.card:hover{
+    box-shadow: 4px 8px 6px 8px rgba(1, 1, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1)
+}
+.fullCard{
+    padding: 0px;
+}
+
+#combate{
+    margin-top: 3%;
+}
+
