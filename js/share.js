@@ -27,6 +27,11 @@ if($.urlParam('bracket') != 0){
         $(btn[0]).html(obj[key]);
     }
     $('#nome').val(obj['nome']);
+    if(obj['nome']){
+        $('#titulo').html(`Bracket Do ${obj['nome']}`);
+        $('#titulo').css('display','block');
+        document.title = `Bracket Do ${obj['nome']}`;
+    }
     $(".item").each(function(){
         var grand = $(this).parent().parent();
         var son = $('#'+$(this).parent().attr('next'))

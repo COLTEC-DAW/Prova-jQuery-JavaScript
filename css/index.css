@@ -28,6 +28,9 @@
   .oitavas .item {
     visibility: visible; }
 
+.pagina {
+  background-image: url(\images\back.jpg); }
+
 .quartas {
   height: 25vh; }
 
