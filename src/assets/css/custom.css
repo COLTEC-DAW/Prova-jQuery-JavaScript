@@ -5,6 +5,10 @@
     src: url("../fonts/Dusha_-_FIFA_World_Cup_2018.ttf");
 }
 
+#modal-regras {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     background-image: url("../images/wallpaper.jpg");
     background-size : "cover";
