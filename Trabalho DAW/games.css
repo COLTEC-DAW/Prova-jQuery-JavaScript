@@ -9,6 +9,7 @@ img {
     display: block;
     margin: 0 auto;
     width: 4vw;
+    height: 3.9vw;
 }
 
 /* Ajustar o titulo */
@@ -26,6 +27,7 @@ p{
 /* jogo vencedor */
 #e1 {
     width: 12vw;
+    height: 10vw;
     margin-top: 7vw;
 }
 
