@@ -16,9 +16,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="ml-auto navbar-nav mr-2">
-                <form class="form-inline my-2 my-lg-0">
+                <div class="form-inline my-2 my-lg-0">
                     <input id="nome" class="form-control mr-3" placeholder="Nome">
-                </form>
+                </div>
                 <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#regras">Regras</a>
                 <div class="modal fade" id="regras" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -47,7 +47,7 @@
     <div class="container">
         <h1 id="titulo" style="display: none" class="text-center"></h1>
     </div>
-    <div class="row col-12 pagina">
+    <div class="row col-12">
         <div class="col coluna">
             <div class="oitavas d-flex justify-content-between">
                 <div next="Q1" class="disputa d-flex flex-column justify-content-around">
@@ -143,10 +143,8 @@
             <div class="quartas d-flex justify-content-between">
                 <div next="S1" class="disputa d-flex flex-column justify-content-around">
                     <button id="Q1" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="Q2" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -154,10 +152,8 @@
             <div class="quartas d-flex justify-content-between">
                 <div next="S2" class="disputa d-flex flex-column justify-content-around">
                     <button id="Q3" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="Q4" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -165,10 +161,8 @@
             <div class="quartas d-flex justify-content-between">
                 <div next="S3" class="disputa d-flex flex-column justify-content-around">
                     <button id="Q5" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="Q6" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -176,10 +170,8 @@
             <div class="quartas d-flex justify-content-between">
                 <div next="S4" class="disputa d-flex flex-column justify-content-around">
                     <button id="Q7" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="Q8" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -189,10 +181,8 @@
             <div class="semi d-flex justify-content-between">
                 <div next="F1" class="disputa d-flex flex-column justify-content-around">
                     <button id="S1" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="S2" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -200,10 +190,8 @@
             <div class="semi d-flex justify-content-between">
                 <div next="F2" class="disputa d-flex flex-column justify-content-around">
                     <button id="S3" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="S4" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -213,10 +201,8 @@
             <div class="final d-flex justify-content-between">
                 <div next="resultado" class="disputa d-flex flex-column justify-content-around">
                     <button id="F1" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                     <button id="F2" class="btn btn-outline-info eliminatorias item">
-                        .
                     </button>
                 </div>
                 <div class="divisor my-auto"></div>
@@ -224,15 +210,16 @@
         </div>
         <div class="col coluna">
             <div class="resultado d-flex flex-column justify-content-center">
-                <button id="resultado" class="btn btn-info eliminatorias item">
-                    .
+                <button id="resultado" class="btn btn-info eliminatorias item mb-2">
                 </button>
+                <button id="compartilhar" class="btn item btn-outline-success">Compartilhe seu Bracket</button>
             </div>
         </div>
     </div>
     <hr>
-    <footer class="container-fluid text-center mb-2">
-            Designed by: Dener V. Ribeiro && Mathias G. Oliveira, in California.
+    <footer class="container-fluid mb-3">
+            <p class="text-center"> Designed by: Dener && Mathias, in California</p>
+            <p class="text-center">Divirta-se !</p>
     </footer>
 
     <!-- Modal -->

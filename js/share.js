@@ -28,15 +28,18 @@ if($.urlParam('bracket') != 0){
     }
     $('#nome').val(obj['nome']);
     if(obj['nome']){
-        $('#titulo').html(`Bracket Do ${obj['nome']}`);
+        $('#titulo').html(`Bracket do ${obj['nome']}`);
         $('#titulo').css('display','block');
-        document.title = `Bracket Do ${obj['nome']}`;
+        document.title = `Bracket do ${obj['nome']}`;
     }
     $(".item").each(function(){
         var grand = $(this).parent().parent();
         var son = $('#'+$(this).parent().attr('next'))
-        if(son.html() != "") {
+        console.log(son.html())
+        if($(this).html() != "") {
             $(this).css('visibility', 'visible');
+        }
+        if(son.html() != "") {
             grand.find('.divisor').css('border-left-color', '#32CD32');
         }
     })

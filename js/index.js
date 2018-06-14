@@ -16,16 +16,19 @@ function updateNext(atual) {
     proximo.css('visibility', 'visible')
     proximo.html(atual.html())
     animation(proximo)
+    if(id == 'resultado') {
+        $('#compartilhar').css('visibility', 'visible')
+    }
     if(proximo.hasClass('.active')) {
         updateNext(proximo)
     }
 }
 
 function animation(atual) {
-    atual.animate({opacity: 0.3}, 600, 'linear')
-    atual.animate({opacity: 1}, 600, 'linear')
+    atual.animate({opacity: 0.3}, 300, 'linear')
+    atual.animate({opacity: 1}, 300, 'linear')
 }
 
-$('#resultado').click(function(){
+$('#compartilhar').click(function(){
     share();
 })

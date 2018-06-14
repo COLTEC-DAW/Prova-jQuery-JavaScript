@@ -12,24 +12,12 @@
   height: 100vh; }
 
 .item {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  visibility: hidden;
-  padding: 5px; }
-
-.line {
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  height: 0;
-  width: 100%; }
+  visibility: hidden; }
 
 .oitavas {
   height: 12.5vh; }
   .oitavas .item {
     visibility: visible; }
-
-.pagina {
-  background-image: url(\images\back.jpg); }
 
 .quartas {
   height: 25vh; }
