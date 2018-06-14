@@ -184,9 +184,9 @@ p{
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px ) and (max-width: 1499px) {
     p{
-        width: 205px;
+        width: 160px;
     }
 
     .elementText{
@@ -196,19 +196,19 @@ p{
     }
     .el1{
         height: 0%;
-        margin-top: 0.5%;
+        margin-top: 10%;
     }
     .el2{
         height: 4%;
-        margin-top: 44%;
+        margin-top: 43%;
     }
     .el3{
         height: 8%;
-        margin-top: 112%;
+        margin-top: 110%;
     }
     .el4{
         height: 16%;
-        margin-top: 250%;
+        margin-top: 240%;
     }
     .el5{
         height:32%;
@@ -225,7 +225,7 @@ p{
         margin-top: 60% !important;
     }
     #c4l0{
-        margin-top: 125% !important;
+        margin-top: 120% !important;
     }
 }
 
