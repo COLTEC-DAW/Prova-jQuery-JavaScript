@@ -58,15 +58,18 @@
             </div>
         
         <!--FINAL-->
+            
+           
+            
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="times-final" name="campeao" id="final-1" href="#champ"></div>
+            </div>
+    
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="times-final" name="campeao" id="final-2" href="#champ"></div>
+            </div>
         
-            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
-                <div class="times-final"  id="final-1"></div>
-            </div>
-    
-            <div class="col-1 col-sm-1 col-md-1 col-lg-1">
-                <div class="times-final" id="final-2"></div>
-            </div>
-    
+
          <!--SEMI-FINAL 2° CHAVE--> 
         
             <div class="col-1 col-sm-1 col-md-1 col-lg-1" id="semi-container-2">
@@ -116,6 +119,19 @@
         <button id="botao-regras" name="modal" href="#dialog">Regras</button>
     </div>
 
+<!--Campeao-->
+
+<div id="boxes1">
+
+    
+    <div id="champ" class="window">
+    <h3 class="text-center" id="champ-text">CAMPEÃO!!!</h3>
+    
+    <a href="#" class="close">Sair</a> 
+    </div>
+
+</div>
+
 <!--Modal-->
 
     <div id="boxes">
@@ -148,15 +164,15 @@ $(document).ready(function(){
 
 
  
-     $("#oitavas-container-1 div:first").click(function(event){
+    $("#oitavas-container-1 div:first").click(function(event){
 
     
-        $("#quarta-1").css({"background-image": "url('times-escudos/180px-Escudo_do_Galo_Atual.jpg')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
+        $("#quarta-1").css({"background-image": "url('times-escudos/SaoPaulo.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
 
 
      });
 
-     $("#oitava-2").click(function(event){
+    $("#oitava-2").click(function(event){
 
         $("#quarta-1").css({"background-image": "url('times-escudos/Vasco.png')", "background-size": "100% 100%", "background-repeat": "no-repeat"});
 
@@ -326,6 +342,7 @@ $(document).ready(function(){
 
     });
 
+
 //Modal//
 
 
@@ -356,6 +373,64 @@ $('.window').hide();
 
 });
 
+//Campeão//
+
+//Final -1//
+
+$("#final-1[name=campeao]").click(function(event) {
+
+
+var id = $(this).attr('href');
+
+
+var winH = $(window).height();
+var winW = $(window).width();
+var background= "#champ";
+
+$(background).css({"background-image": $("#final-1").css("background-image"),"background-size": "100% 100%", "background-repeat": "no-repeat"})
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+$(id).fadeIn(1000);
+});
+
+
+$('.window .close').click(function (e) {
+
+e.preventDefault();
+$('.window').hide();
+});
+
+//Final -2//
+
+$("#final-2[name=campeao]").click(function(e) {
+
+e.preventDefault();
+
+
+var id = $(this).attr('href');
+
+
+var winH = $(window).height();
+var winW = $(window).width();
+var background= "#champ";
+
+$(background).css({"background-image": $("#final-2").css("background-image"),"background-size": "100% 100%", "background-repeat": "no-repeat"})
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+$(id).fadeIn(1000);
+});
+
+
+$('.window .close').click(function (e) {
+
+e.preventDefault();
+$('.window').hide();
+});
+
+//Campo de Nome//
+
 </script>
 
 <form id="peganome" action="/action_page.php">
@@ -369,7 +444,7 @@ $('.window').hide();
 <script>
 function mostranome() {
     var x = document.getElementById("peganome");
-    var nomep = "Este é o Bracket de ";
+    var nomep = "Desenvolvido por:";
     var i;
     for (i = 0; i < x.length ;i++) {
         nomep += x.elements[i].value + "<br>";
@@ -379,6 +454,7 @@ function mostranome() {
     $("trocanome").click(function(){
         $("peganome").hide();
         $("trocanome").hide();
+        $("fname").hide();
     });
 }
 
