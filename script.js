@@ -72,12 +72,6 @@
             "Henrique"]
 
             sorteiaConfrontos(nomes);
-            var chave = [];
-            chave[0] = "diferente de nada";
-            chave[1] = "difente de nada";
-            var champ;
-            var position;
-
             // Atribui id //
             var listas = []
 
@@ -98,21 +92,25 @@
             }
 
 
+            var chave = [];
+            chave[0] = "diferente de nada";
+            chave[1] = "diferente de nada";
 
             // Clique no nome
             $(".card li").click(function(){
-                chave[0] = $(this);
-                chave[1] = $($(this).siblings()[0]);
+                chave[0] = $(this); // Primeira opcao
+                chave[1] = $($(this).siblings()[0]); // Segunda opcao
                 
-                if(chave[1].text() != "" && chave[0].text() != ""){
-
+                if(chave[1].text() != "" && chave[0].text() != ""){ // Se os campos não estiverem vazios
+                    // Animacao do confronto
                     var width100 = 100;
-                    $("#confronto").css("display", "block");
+                    $("#confronto").css({"display":"block", "height":$("body").height()-$("#titulo").height()}); 
                     $(".opcao img").animate({
                         "width": width100+'%',
                         "height": 480,
                     }, 1000 );
                 
+                    // Coloca os nomes
                     if(chave[1].text() == chave[0].next().text()){
                         $($(".opcao").children()[1]).text(chave[0].text());
                         $($(".opcao").children()[3]).text(chave[1].text());
@@ -121,30 +119,34 @@
                         $($(".opcao").children()[3]).text(chave[0].text());     
                     }
                     
+                    // Coloca as imagens
                     $("#imagem_um").attr("src", "alunos/" + nomes.indexOf($("#imagem_um").next().text()) +".jpeg");  //coloca a imagem correta
                     $("#imagem_dois").attr("src", "alunos/" + nomes.indexOf($("#imagem_dois").next().text()) +".jpeg"); //coloca a imagem correta
                 }
            });
 
         //Escolha do vencedor
-           $(".opcao").click(function(){
-                champ =  $(this).find("h3").text() == chave[0].text() ? chave[0] : chave[1];    
-                var looser = $(this).find("h3").text() != chave[0].text() ? chave[0] : chave[1];    
-                var proximo;
+        var j=0;
 
+           $(".opcao").click(function(){
+                var champ =  $(this).find("h3").text() == chave[0].text() ? chave[0] : chave[1];   // Vencedor do duelo 
+                var looser = $(this).find("h3").text() != chave[0].text() ? chave[0] : chave[1];    // Perdedor do duelo
+                var proximo; // Armazena a coluna posterior a em que houve o confronto
+                var position // Posicao onde sera inserido o nome do campeao;
+                
+                // Se estiver do lado direito
                 if ($($(champ).parents()[2]).attr("class").includes("direita")){
                         proximo = $($(champ).parents().prev()).children();
-                    
-                }else{
-                    if ($(champ).attr("class").includes("ultimo")){ // Lembrar de por ultimo em todos
+                }else{ // Se não
+                    if ($(champ).attr("class").includes("ultimo")){
                         proximo = $(champ).parents().next()[0];
                     }else{
                         proximo = $(champ).parents().next()[1];
                     }
                 }
 
-                var i;
                 if ($($(proximo).parents()[0]).attr("class") != undefined){
+                    position = parseInt($(champ).parent().attr("id")); // Posicao onde sera colocado o campeao
                     // Coloca nome do vencedor no proximo
                     if($($(proximo).parents()[0]).attr("class").includes("col_final")){
                         if($($(champ).parents()[2]).attr("class").includes("direita")){
@@ -153,12 +155,12 @@
                             $($(proximo).find("li")[position]).text(champ.text());
                         }
                     }else{
-                        position = parseInt($(champ).parent().attr("id"));
                         $($(proximo).find("li")[position]).text(champ.text());
                     }
                     
-                    // Troca nome dos perdedores
-                    participantes = [];
+                    // Troca todos os nomes do perdedor pelo do vencedor, exceto os que estão antes do confronto 
+                    var participantes = [];
+                    var i;
                     if ($($(looser).parents()[2]).attr("class").includes("col_16avos")){
                         participantes = participantes.concat($(".col_oitavas").children().find("li").toArray());
                         participantes = participantes.concat($(".col_quartas").children().find("li").toArray());
@@ -181,13 +183,18 @@
                     }
 
                 }
-
                 // Se for final
                 if($($(champ).parents()[2]).attr("class").includes("col_final")){
-                    console.log("acabou");
-                    $("#campeao").text("Parabéns " + $(champ).text() + ", nosso campeão!");
-                    $(".pyro").attr("class", "pyro d-block");
-
+                    $(".campeao h1").text("Parabéns " + $(champ).text() + ", nosso(a) campeão(ã)!"); // Coloca o nome do campeao
+                    $(".campeao img").attr("src", "alunos/" + nomes.indexOf($(champ).text()) +".jpeg");
+                    $(".pyro").attr("class", "pyro d-block"); // Dispara a animacao
+                    
+                    // Usuário é forçado à recarregar a página para jogar de novo
+                    $(".col-16-avos").css("pointer-events", "none");
+                    $(".col-oitavas").css("pointer-events", "none");
+                    $(".col-semis").css("pointer-events", "none");
+                    $(".col-quartas").css("pointer-events", "none");
+                    $(".col-final").css("pointer-events", "none");
                 }
 
                 // Volta pro jogo
