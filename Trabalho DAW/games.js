@@ -9,10 +9,6 @@ g semi
 h quartas
 i oitavas
 */
-function animação(item){
-
-}
-
 function proxColuna(coluna){
     switch (coluna) {
         case 'a':
@@ -61,10 +57,8 @@ const indefinido = "imagens/interrogacao.png";
 const win = "imagens/win.png";
 function clique(item){
     if(item.src==indefinido){ //impedir continuar se foi clicado em algum não definido
-        return 0;
+        return false;
     }
-
-    animação(item); //Uma animação para ser executada quando for dado um clique
     
     var coluna = item.id[0];
     var linha = item.id[1];

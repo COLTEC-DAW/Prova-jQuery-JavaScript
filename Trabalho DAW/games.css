@@ -12,6 +12,10 @@ img {
     height: 3.9vw;
 }
 
+img:hover{
+    transform: scale(1.2);
+}
+
 /* Ajustar o titulo */
 p{
     text-align: center;
