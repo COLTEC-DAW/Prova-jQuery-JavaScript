@@ -61,6 +61,7 @@ function startBracketShared(tree, queries) {
     document.getElementById("nome").innerHTML = queries[queries.length-1];
     $(".games").css("pointer-events", "none");
     $("#btn-modal-video").css("display", "inline");
+    $("#nomeUser").css("display", "none");
     
 }
 
