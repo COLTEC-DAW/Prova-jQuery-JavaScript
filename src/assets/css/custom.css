@@ -9,6 +9,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#btn-modal-video {
+    margin-left: 25px;
+    display: none
+}
+
 body {
     background-image: url("../images/wallpaper.jpg");
     background-size : "cover";

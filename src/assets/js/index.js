@@ -50,15 +50,18 @@ function startBracketShared(tree, queries) {
         }
 
         if(new String(imageNode[1]).valueOf() != new String("n/A").valueOf()) {
-            tree.setNode(level, imageNode[1]);
+            tree.setNode(imageNode[1], level, imageNode[0]);
             setImage(imageNode[1], level, imageNode[0])
             console.log(imageNode[1], level, imageNode[0]);
         }
     }
+
+    attrSrcVideo(tree,content);
+
     document.getElementById("nome").innerHTML = queries[queries.length-1];
     $(".games").css("pointer-events", "none");
-    // document.getElementsByClassName("image-top").style['pointer-events'] = "none"
-    // document.getElementsByClassName("image-bottom").style['pointer-events'] = "none";
+    $("#btn-modal-video").css("display", "inline");
+    
 }
 
 function startBracket(tree, json) {
@@ -80,6 +83,8 @@ function attrSrcVideo (tree, json) {
             break;
         }
     }  
+
+
     
     $('#modal1').modal();
 }    
@@ -214,7 +219,8 @@ $(document).ready(function () {
     verifyingTheQueryString(tree);
 
     $("#btn-modal-video").click(function() {
-        $("#modal1").modal(); 
+        if ($("#level:0-node:0").src != "" && $("#level:0-node:0").src != null )
+            $("#modal1").modal(); 
     });
 
     $("#btn-modal-regras").click(function () {
@@ -223,10 +229,15 @@ $(document).ready(function () {
 
     $(".games").click(function() { 
         makeWinnerChange(this, tree);
+        
+        if($(this).children().children()[0].id == "level:1-node:0" || 
+            $(this).children().children()[0].id == "level:1-node:1") {
+            $("#btn-modal-video").css("display", "inline");
+        };
     });
 
     $("#btn-share").click(function() {
-       var nome = $("#nomeUser").val();
+       var nome = $("#nomeUser").val().split(' ')[0];
        console.log(nome);
        var content=shareContent(tree);
        var recursiveDecoded = decodeURIComponent($.param(content[0])) + "&"
@@ -236,8 +247,8 @@ $(document).ready(function () {
                             + decodeURIComponent(nome);
         var log = window.location;
 
-        window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=bracketChallenge&caption=' +'&content='
-            + encodeURIComponent(window.location + "?r=" + recursiveDecoded) +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+        window.open('https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text='
+            + encodeURIComponent(window.location + "?r=" + recursiveDecoded));
 
         window.location.assign(log);
     });
