@@ -1,100 +1,141 @@
 .movie_01 {
-    color: red;
-    margin: 5px;
-    cursor: pointer;
+  content: url("filmes/chihiro.png");
+  width: 100%;
+  height: 50%;
 }
 .movie_02 {
-color: rgb(0, 255, 242);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/alice.png");
+  width: 100%;
 }
 .movie_03 {
-color: rgb(107, 107, 165);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/porcorusso.png");
+  width: 100%;
 }
 
 .movie_04 {
-color: green;
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/Aladdin.png");
+  width: 100%;
+
 }
 
 .movie_05 {
-color: black;
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/mononoke.png");
+  width: 100%;
+
 }
 
 .movie_06 {
-color: brown;
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/pocahontas.png");
+  width: 100%;
+
 }
 
 .movie_07 {
-color: yellowgreen;
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/moving\ catle.png");
+  width: 100%;
+
 }
 
 .movie_08 {
-color: rgb(14, 167, 154);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/lady_and_the_tramp.png");
+  width: 100%;
+
 }
 
 .movie_09 {
-color: rgb(255, 0, 212);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/laputa1.png");
+  width: 100%;
+
 }
 
 .movie_10 {
-color: rgb(10, 112, 82);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/The_Lion_King.png");
+  width: 100%;
 }
 
 .movie_11 {
-color: rgb(134, 25, 49);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/kiki.png");
+  width: 100%;
 }
 
 .movie_12 {
-color: rgb(32, 83, 59);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/Bambi.png");
+  width: 100%;
 }
 
 .movie_13 {
-color: rgb(35, 104, 64);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/ponyo.png");
+  width: 100%;
 }
 
 .movie_14 {
-color: rgb(116, 111, 53);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/the-little-mermaid-logo.png");
+  width: 100%;
 }
 
 .movie_15 {
-color: rgb(11, 11, 112);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/totoro.png");
+  width: 100%;
 }
 
 .movie_16 {
-color: rgba(45, 129, 129, 0.507);
-margin: 5px;
-cursor: pointer;
+  content: url("filmes/liloestitch.png");
+  width: 100%;
 }
-
 
 .default {
-  color: grey;
-  margin: 5px;
-  cursor: pointer;
+  content: url("img/Fundo\ transparente.png");
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 15px;
 }
+
+body{
+  width: 100%;
+  height: 100%;
+}
+#quarta_01,#quarta_02,#quarta_03, #quarta_04, #quarta_05, #quarta_06, #quarta_07, #quarta_08{
+  margin-top: 50%;
+
+} 
+#semi_01,#semi_03{
+  margin-top: 100%;
+
+} 
+
+#semi_02{
+  margin-top: 130%;
+  margin-bottom: 50%
+}
+
+#semi_04{
+margin-top: 130%;
+}
+
+#final_01{
+  margin-top: 180%;
+}
+
+#final_02{
+  margin-top: 280%;
+
+}
+ 
+#vencedor{
+  margin-top: 60%;
+}
+
+
+
+body{
+  background-image: url("img/back.png")
+}
+.octa{
+  padding-bottom: 7.5%;
+  padding-top: 7.5%;
+}
+
+body{
+background-image: url("img/download.jpeg")
+}
+
