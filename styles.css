@@ -1,0 +1,12 @@
+img{
+  width:100px;height:64px;
+}
+
+#oitavas, #quartas, #semi, #final, #vencedor{
+  display: inline-block;
+}
+
+body{
+  background-image: url('img/bg.jpg');
+  background-size:  cover;
+}
