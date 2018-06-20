@@ -1,0 +1,125 @@
+body{
+    background-image: url('imagens/background.png');
+    background-repeat: no-repeat;
+    background-size: 105vw;
+}
+
+/* Centralizar imagens nas colunas */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 4vw;
+    height: 3.9vw;
+}
+
+img:hover{
+    transform: scale(1.2);
+}
+
+.aumentado{
+    transform: scale(2);
+    transition: 0.5s;
+}
+.aumentado:hover{
+    transform: scale(2);
+}
+.naumentado{
+    transform: scale(1);
+    transition: 2s;
+}
+.naumentado:hover{
+    transform: scale(1);
+}
+
+/* Ajustar o titulo */
+p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3.5vw;
+    color: FireBrick;
+}
+/* Ajustar o botao Regras */
+.btn.btn-danger {
+    margin-left: 32%;
+}
+
+/* jogo vencedor */
+#e1 {
+    width: 12vw;
+    height: 10vw;
+    margin-top: 7vw;
+}
+
+
+/*margin entre as imagens da coluna 1*/
+.col.col-sm-3.coluna1 > img{
+    margin-top: 1.5vw;
+}
+
+
+/* Margin top da coluna 2 */
+.col.col-sm-3.coluna2{
+    margin-top: -3vw;
+}
+
+/* margin top entre as imagens da coluna 2 */
+.col.col-sm-3.coluna2 > img{
+    margin-top: 7.1vw;
+}
+
+/* Margin top da coluna 3 */
+.col.col-sm-3.coluna3{
+    margin-top: -8.7vw;
+}
+
+/* margin top entre as imagens da coluna 3 */
+.col.col-sm-3.coluna3 > img{
+    margin-top: 18.7vw;
+}
+
+/* Margin top da coluna 4 */
+.col.col-sm-3.coluna4{
+    margin-top: 21vw;
+}
+
+
+/* Efeitos de rotacao */
+#e01 {
+    transition: transform 0.3s;
+}
+  
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* rodape da pagina */
+.rodape {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: FireBrick;
+}
+
+#campo{
+    margin-top: 7px;
+    margin-left: 37%;
+}
+ /* Ajustar botao enviar nome */
+ .btn.btn-default {
+    margin-left: 2vw;
+    margin-top: -5px;
+ }
+ input[type=text] {
+    padding: 5px 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+h5{
+    text-align: center;
+    margin-top: 12px;
+}
