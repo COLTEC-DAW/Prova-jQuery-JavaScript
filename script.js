@@ -14,7 +14,6 @@ checkbox.addEventListener("change", () => {
 
     }
 
-
 })
 
 
