@@ -1,6 +1,6 @@
 
-let checkbox = document.querySelector("#check");
-let senha = document.querySelector("#senha");
+const checkbox = document.querySelector("#check");
+const senha = document.querySelector("#senha");
 
 checkbox.addEventListener("change", () => {
     
