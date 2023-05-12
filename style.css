@@ -1,0 +1,95 @@
+
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    margin: auto;
+    min-width: 20vw;
+
+    border: solid 1px rgb(172, 172, 172);
+    border-radius: 4px;
+
+
+}
+
+form{
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+h2{
+    padding: 1em;
+}
+
+.email, .senha{
+    border: solid 1px rgb(172, 172, 172);
+    font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    border-radius: 4px;
+    margin: 10px;
+
+    padding: 0 12px 0 12px;
+    height: 52px;
+}
+
+.campo-mostrar{
+    align-self: flex-start;
+    margin-left: 10px;
+
+    padding: 12px 0 24px 0;
+}
+
+
+
+.bot{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0 36px 0;
+}
+
+.bot a{
+    padding: 12px;
+    border-radius: 4px;
+    
+    color: rgb(26,115,232);
+}
+
+.bot a:hover{
+    background-color: rgb(238, 238, 238);
+    color: rgb(13, 85, 179);
+}
+
+.bot button{
+    border: none;
+    border-radius: 4px;
+
+    background-color: rgb(26,115,232);
+    color: white;
+
+    text-align: center;
+
+    height: 32px;
+    width: 72px;
+    margin: 10px;
+}
+
+.bot button:hover{
+    background-color: rgb(11, 100, 216);
+}
+
